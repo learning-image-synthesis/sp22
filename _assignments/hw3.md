@@ -2,7 +2,7 @@
 type: assignment
 date: 2021-03-10T4:00:00-5:00
 title: 'Assignment #3 - When Cats meet GANs'
-thumbnail: /static_files/assignments/hw3c/cats.png
+thumbnail: /static_files/assignments/hw3/teaser.png
 attachment: /static_files/assignments/hw3/16726_s21_hw3-main.zip
 due_event:
     type: due
@@ -12,7 +12,7 @@ mathjax: true
 hide_from_announcments: true
 ---
 
-{% include image.html url="/static_files/assignments/hw3/cats.png" %}
+{% include image.html url="/static_files/assignments/hw3/row_cats.png" %}
 
 ## Introduction
 In this assignment, you’ll get hands-on experience coding and training GANs. This assignment is divided into two parts: in the first part, we will implement a specific type of GAN designed to process
