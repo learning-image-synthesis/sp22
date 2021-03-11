@@ -2,7 +2,7 @@
 type: assignment
 date: 2021-03-10T4:00:00-5:00
 title: 'Assignment #3 - CatGANs'
-thumbnail: /static_files/assignments/hw3/teaser.jpg
+thumbnail: /static_files/assignments/hw3c/cats.png
 attachment: /static_files/assignments/hw3/16726_s21_hw3-main.zip
 due_event:
     type: due
@@ -12,19 +12,19 @@ mathjax: true
 hide_from_announcments: true
 ---
 
-{% include image.html url="/static_files/assignments/hw3/teaser.jpg" %}
+{% include image.html url="/static_files/assignments/hw3/cats.png" %}
 ## Introduction
 In this assignment, you’ll get hands-on experience coding and training GANs. This assignment is divided into two parts: in the first part, we will implement a specific type of GAN designed to process
 images, called a Deep Convolutional GAN (DCGAN). We’ll train the DCGAN to generate dome grumpy cats from samples of random noise.
 In the second part, we will implement a more complex GAN architecture called CycleGAN, which was designed for the task of image-to-image translation (described in more detail in Part 2).
 We’ll train the CycleGAN to convert between different types of two kinds of cats (Grumpy and Russian Blue).
-In both parts, you’ll gain experience implementing GANs by writing code for the generator, discriminator, and training loop, for each model. Code and data can be found [here](/static_files/assignments/hw3/16726_s21_hw3-main.zip).
+In both parts, you’ll gain experience implementing GANs by writing code for the generator, discriminator, and training loop, for each model. Code and data can be found [here](/static_files/assignments/hw3/16726_s21_hw3-main.zip). Our slides on this assignment are [here](/static_files/assignments/hw3/hw3_pptx.pptx).
 
 
 ## Part 1: Deep Convolutional GAN
 For the first part of this assignment, we will implement a Deep Convolutional GAN (DCGAN). A DCGAN is simply a GAN that uses a convolutional neural network as the discriminator, and a network composed of transposed convolutions as the generator. To implement the DCGAN, we need to specify three things: 1) the generator, 2) the discriminator, and 3) the training procedure. We will develop each of these three components in the following subsections.
 
-### Implement Data Augmentation [10%]
+### Implement Data Augmentation [10 points]
 DCGAN will perform poorly without data augmentation on small sized dataset because the discriminator can easily overfit to real dataset. To rescue, we need to add some data augmentation such as random crop and random horizontal flip.
 You need to fill in deluxe version of data augmentation in   `data_loader.py`. We provide some script for you to begin with. You need to compose them into a transform object which is passed to CustomDataset. 
 ```angular2html
@@ -38,7 +38,7 @@ You need to fill in deluxe version of data augmentation in   `data_loader.py`. W
         pass
 ```
 
-### Implement the Discriminator of the DCGAN [10%]
+### Implement the Discriminator of the DCGAN [10 points]
 The discriminator in this DCGAN is a convolutional neural network that has the following architecture:
 {% include image.html url="/static_files/assignments/hw3/discriminator.png" %}
 1. Padding: In each of the convolutional layers shown above, we downsample the spatial dimension of the input volume by a factor of 2. Given that we use kernel size K = 4 and stride S = 2, what should the padding be? Write your answer in your website, and show your work (e.g., the formula you used to derive the padding).
@@ -73,7 +73,7 @@ The discriminator in this DCGAN is a convolutional neural network that has the f
     ```
 Note: The function `conv` in `models.py` has an optional argument `norm`: if `norm`
 is `none`, then `conv` simply returns a `torch.nn.Conv2d` layer; if `norm` is `instance/batch`, then `conv` returns a network block that consists of a `Conv2d` layer followed by a `torch.nn.InstanceNorm2d/BatchNorm2d` layer. Use the `conv` function in your implementation.
-## Generator [10%]
+## Generator [10 points]
 Now, we will implement the generator of the DCGAN, which consists of a sequence of transpose convolutional layers that progressively upsample the input noise sample to generate a fake image. The generator we’ll use in this DCGAN has the following architecture:
 {% include image.html url="/static_files/assignments/hw3/generator.png" %}
 
@@ -81,7 +81,7 @@ Now, we will implement the generator of the DCGAN, which consists of a sequence 
 1. Implementation: Implement this architecture by filling in the `__init__` and `forward` method of the `DCGenerator` class in `models.py`.
 Note: Use the `deconv` function (analogous to the `conv` function used for the discriminator above) in your generator implementation.
 
-### Training Loop [10%]
+### Training Loop [10 points]
 Next, you will implement the training loop for the DCGAN. A DCGAN is simply a GAN with a specific type of generator and discriminator; thus, we train it in exactly the same way as a standard GAN. The pseudo-code for the training procedure is shown below. The actual implementation is simpler than it may seem from the pseudo-code: this will give you practice in translating math to code.
 1. Implementation: Open up the file `vanilla_gan.py` and fill in the indicated parts of the `training_loop` function, starting at line 149, i.e., where it says
 ```
@@ -90,7 +90,7 @@ Next, you will implement the training loop for the DCGAN. A DCGAN is simply a GA
 ```
 There are 5 numbered bullets in the code to fill in for the discriminator and 3 bullets for the generator. Each of these can be done in a single line of code, although you will not lose marks for using multiple lines.
 {% include image.html url="/static_files/assignments/hw3/gan_algo.png" %}
-### Experiment [10%]
+### Experiment [10 points]
 1. Train the DCGAN with the command:
 ```
 python vanilla_gan.py --num_epochs=100 
@@ -106,7 +106,7 @@ Now we are going to implement the CycleGAN architecture.
 ### Data Augmentation 
 Remember to set the data augmentation to deluxe or feel free to add your additional data augmentation. 
 
-### Generator [20%]
+### Generator [20 points]
 The generator in the CycleGAN has layers that implement three stages of computation: 1) the first stage *encodes* the input via a series of convolutional layers that extract the image features; 2) the second stage then *transforms* the features by passing them through one or more residual blocks; and 3) the third stage *decodes* the transformed features using a series of transposed convolutional layers, to build an output image of the same size as the input.
 The residual block used in the transformation stage consists of a convolutional layer, where the input is added to the output of the convolution. This is done so that the characteristics of the output image (e.g., the shapes of objects) do not differ too much from the input.
 Implement the following generator architecture by completing the `__init__` method of the `CycleGenerator` class in `models.py`.
@@ -127,7 +127,7 @@ def __init__(self, conv_dim=64, init_zero_weights=False):
 
 To do this, you will need to use the `conv` and `deconv` functions, as well as the `ResnetBlock` class, all provided in `models.py`.
 **Note:** There are two generators in the `CycleGAN` model, \\(G_{X\toY}\\) and \\(G_{Y\toX}\\), but their implementations are identical. Thus, in the code, \\(G_{X\toY}\\) and \\(G_{Y\toX}\\) are simply different instantiations of the same class.
-### CycleGAN Training Loop [20%]
+### CycleGAN Training Loop [20 points]
 Finally, we will implement the CycleGAN training procedure, which is more involved than the procedure in Part 1.
 {% include image.html url="/static_files/assignments/hw3/cyclegan_algo.png" %}
 Similarly to Part 1, this training loop is not as difficult to implement as it may seem. There
@@ -163,7 +163,7 @@ if opts.use_cycle_consistency_loss:
     # cycle_consistency_loss = ...
     g_loss += cycle_consistency_loss
 ```
-### CycleGAN Experiments [15%]
+### CycleGAN Experiments [15 points]
 Training the CycleGAN from scratch can be time-consuming if you don’t have a GPU. In this part, you will train your models from scratch for just 600 iterations, to check the results. To save training time, we provide the weights of pre-trained models that you can load into your implementation. In order to load the weights, your implementation must be correct.o
 
 1. Train the CycleGAN without the cycle-consistency loss from scratch using the command:
@@ -189,6 +189,7 @@ Similarly, this runs for 600 iterations, and saves generated samples in the `out
 CycleGAN models, and your answers to the written questions as specified in the previous sections.
 
 ## Bells & Whistles (Extra Points)
+Max of **10** points from the bells and whistles.
 * Get your GAN and / or CycleGAN to work on another dataset. We've included a dataset of different types of Pokemon **(2pts)** or you can find your own suitable one **(3pts)**.
 * Implement a [patch discriminator](https://paperswithcode.com/method/patchgan) **(4pts)** so that you can force local features to look realistic.
 * Implement [differentiable data augmentation](https://proceedings.neurips.cc//paper/2020/file/55479c55ebd1efd3ff125f1337100388-Paper.pdf) for your generator **(2pts)** in order to make it more efficient with samples and force the discriminator to not memorize the dataset.
@@ -200,10 +201,9 @@ CycleGAN models, and your answers to the written questions as specified in the p
 * Your own ideas you've cleared with the TAs.
 
 ## Further Resources
-* [Unpaired image-to-image translation using cycle-consistent adversarial networks (Zhu et al., 2017)](https://arxiv.org/pdf/1703.10593.pdf)
 * [Generative Adversarial Nets (Goodfellow et al., 2014)](https://arxiv.org/pdf/1406.2661.pdf)
-* [An Introduction to GANs in Tensorflow](http://blog.aylien.com/introduction-generative-adversarial-networks-code-tensorflow/)
 * [Generative Models Blog Post from OpenAI](https://blog.openai.com/generative-models/)
+* [Unpaired image-to-image translation using cycle-consistent adversarial networks (Zhu et al., 2017)](https://arxiv.org/pdf/1703.10593.pdf)
 * [Official PyTorch Implementations of Pix2Pix and CycleGAN](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix)
 
 
