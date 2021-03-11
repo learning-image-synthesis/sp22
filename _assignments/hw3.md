@@ -1,7 +1,7 @@
 ---
 type: assignment
 date: 2021-03-10T4:00:00-5:00
-title: 'Assignment #3 - GAN and CycleGAN'
+title: 'Assignment #3 - CatGANs'
 thumbnail: /static_files/assignments/hw3/teaser.jpg
 attachment: /static_files/assignments/hw3/16726_s21_hw3-main.zip
 due_event:
