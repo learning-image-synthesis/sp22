@@ -201,7 +201,7 @@ Max of **10** points from the bells and whistles.
 * Implement [differentiable data augmentation](https://proceedings.neurips.cc//paper/2020/file/55479c55ebd1efd3ff125f1337100388-Paper.pdf) for your generator **(2pts)** in order to make it more efficient with samples and force the discriminator to not memorize the dataset.
 * Implement [spectral normalization](https://arxiv.org/pdf/1802.05957.pdf) **(2pts)** on your GANs for stability.
 * Do something cool with your model: Generate a GIF video or create a meme using your model (You can add your text manually.)  OR design a new pokemon?  Find directions in the latent space that can change the image in a meaningful way. **(up to 4 pts)**
-* Train your GAN to generate higher-resolution images **(up to 2 pts)**
+* Train your GAN to generate higher-resolution images **(up to 2 pts)** They are available at [this link](/static_files/assignments/hw3/high_res_images.tar.gz).
 * Find an improvement to the loss for DCGAN or CycleGAN and implement it **(4 pts)**.
 * Use a different type of generative model (like a VAE, PixelCNN, or flow-based model) for the same task **(up to 8 pts)**
 * Your own ideas you've cleared with the TAs.
