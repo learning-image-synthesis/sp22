@@ -1,3 +1,4 @@
+---
 type: lecture
 date: 2021-03-15T16:00:00-05:00
 title: "Conditional Image Generation (student presentation)"
