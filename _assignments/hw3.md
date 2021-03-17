@@ -197,7 +197,6 @@ Max of **10** points from the bells and whistles.
 {% include image.html url="/static_files/assignments/hw3/pokemon.png" %}
 
 * Get your GAN and / or CycleGAN to work on another dataset. We've included a dataset of different types of Pokemon **(2pts)** or you can find your own suitable one **(3pts)**.
-{% include image.html url="/static_files/assignments/hw3/pokemon_thumb.png" %}
 * Implement a [patch discriminator](https://paperswithcode.com/method/patchgan) **(4pts)** so that you can force local features to look realistic.
 * Implement [differentiable data augmentation](https://proceedings.neurips.cc//paper/2020/file/55479c55ebd1efd3ff125f1337100388-Paper.pdf) for your generator **(2pts)** in order to make it more efficient with samples and force the discriminator to not memorize the dataset.
 * Implement [spectral normalization](https://arxiv.org/pdf/1802.05957.pdf) **(2pts)** on your GANs for stability.
