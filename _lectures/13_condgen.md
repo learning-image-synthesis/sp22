@@ -1,5 +1,5 @@
 type: lecture
-date: 2021-02-15T16:00:00-05:00
+date: 2021-03-15T16:00:00-05:00
 title: "Conditional Image Generation (student presentation)"
 tldr: "Cool recent papers in conditional image generation"
 hide_from_announcments: true
