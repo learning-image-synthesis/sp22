@@ -5,9 +5,9 @@ title: "Generative Models (student presentation)"
 tldr: Cool papers about generative models
 hide_from_announcments: true
 links:
-    - url: "http://www.andrew.cmu.edu/course/16-727/static_files/2020_03_01and03_generative_models_v3.pptx"
+    - url: "http://www.andrew.cmu.edu/course/16-726/static_files/2021_03_01and03_generative_models_v3.pptx"
       name: pptx
-    - url: "http://www.andrew.cmu.edu/course/16-726/static_files/2020_03_01and03_generative_models_v3.pdf"
+    - url: "http://www.andrew.cmu.edu/course/16-726/static_files/2021_03_01and03_generative_models_v3.pdf"
       name: pdf
 ---
 Reading List:
