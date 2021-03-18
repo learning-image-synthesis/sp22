@@ -168,7 +168,7 @@ if opts.use_cycle_consistency_loss:
     g_loss += cycle_consistency_loss
 ```
 ### CycleGAN Experiments [15 points]
-Training the CycleGAN from scratch can be time-consuming if you don’t have a GPU. In this part, you will train your models from scratch for just 600 iterations, to check the results. To save training time, we provide the weights of pre-trained models that you can load into your implementation. In order to load the weights, your implementation must be correct.o
+Training the CycleGAN from scratch can be time-consuming if you don’t have a GPU. In this part, you will train your models from scratch for just 600 iterations, to check the results. 
 
 1. Train the CycleGAN without the cycle-consistency loss from scratch using the command:
 ```angular2html
