@@ -130,7 +130,7 @@ def __init__(self, conv_dim=64, init_zero_weights=False):
 {% include image.html url="/static_files/assignments/hw3/cyclegan_generator.png" %}
 
 To do this, you will need to use the `conv` and `deconv` functions, as well as the `ResnetBlock` class, all provided in `models.py`.
-**Note:** There are two generators in the `CycleGAN` model, \\(G_{X\toY}\\) and \\(G_{Y\toX}\\), but their implementations are identical. Thus, in the code, \\(G_{X\toY}\\) and \\(G_{Y\toX}\\) are simply different instantiations of the same class.
+**Note:** There are two generators in the `CycleGAN` model, \\(G_{X\to Y}\\) and \\(G_{Y\to X}\\), but their implementations are identical. Thus, in the code, \\(G_{X\to Y}\\) and \\(G_{Y\to X}\\) are simply different instantiations of the same class.
 ### CycleGAN Training Loop [20 points]
 Finally, we will implement the CycleGAN training procedure, which is more involved than the procedure in Part 1.
 {% include image.html url="/static_files/assignments/hw3/cyclegan_algo.png" %}
@@ -167,6 +167,8 @@ if opts.use_cycle_consistency_loss:
     # cycle_consistency_loss = ...
     g_loss += cycle_consistency_loss
 ```
+EDIT: Here, we gave a L2 formulation of the cycle consistency loss. However, you might benefit from using an L1 loss as in the paper. If you go with L2, try a larger value of \\(\lambda\\).
+
 ### CycleGAN Experiments [15 points]
 Training the CycleGAN from scratch can be time-consuming if you don’t have a GPU. In this part, you will train your models from scratch for just 600 iterations, to check the results. 
 
