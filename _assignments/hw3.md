@@ -153,7 +153,7 @@ There are 5 bullet points in the code for training the discriminators, and 6 bul
 ### Cycle Consistency
 
 The most interesting idea behind CycleGANs (and the one from which they get their name) is the idea of introducing a cycle consistency loss to constrain the model. The idea is that when we translate an image from domain \\(X\\) to domain \\(Y\\), and then translate the generated image back to domain \\(X\\), the result should look like the original image that we started with.
-The cycle consistency component of the loss is the mean squared error between the input images and their reconstructions obtained by passing through both generators in sequence (i.e., fromdomain \\(X\\) to \\(Y\\) viathe \\(X \to Y\\) generator, and then from domain \\(Y\\) back to \\(X\\) via the \\(Y \to X\\) generator). The cycle consistency loss for the \\(Y \to X \to Y\\) cycle is expressed as follows:
+The cycle consistency component of the loss is the mean squared error between the input images and their reconstructions obtained by passing through both generators in sequence (i.e., from domain \\(X\\) to \\(Y\\) viathe \\(X \to Y\\) generator, and then from domain \\(Y\\) back to \\(X\\) via the \\(Y \to X\\) generator). The cycle consistency loss for the \\(Y \to X \to Y\\) cycle is expressed as follows:
 
 {% raw %}
 $$ \frac{1}{m}\sum_{i=1}^m (y^{(i)} - G_{X\to Y}(G_{Y\to X}(y^{(i)})))^2$$
