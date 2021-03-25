@@ -17,18 +17,18 @@ hide_from_announcments: true
 
 
 ## Introduction
-In this assignment, you’ll get hands-on experience coding and training GANs. This assignment is divided into two parts: in the first part, we will implement a specific type of GAN designed to process
-images, called a Deep Convolutional GAN (DCGAN). We’ll train the DCGAN to generate dome grumpy cats from samples of random noise.
-In the second part, we will implement a more complex GAN architecture called CycleGAN, which was designed for the task of image-to-image translation (described in more detail in Part 2).
-We’ll train the CycleGAN to convert between different types of two kinds of cats (Grumpy and Russian Blue).
-In both parts, you’ll gain experience implementing GANs by writing code for the generator, discriminator, and training loop, for each model. Code and data can be found [here](/static_files/assignments/hw3/16726_s21_hw3-main.zip). Our slides on this assignment are [here](/static_files/assignments/hw3/hw3_pptx.pptx).
+In this assignment, you will get hands-on experience coding and training GANs. This assignment includes two parts: in the first part, we will implement a specific type of GAN designed to process
+images, called a Deep Convolutional GAN (DCGAN). We will train the DCGAN to generate grumpy cats from samples of random noise.
+In the second part, we will implement a more complex GAN architecture called CycleGAN for the task of image-to-image translation (described in more detail in Part 2).
+We will train the CycleGAN to convert between different types of two kinds of cats (Grumpy and Russian Blue).
+In both parts, you will gain experience implementing GANs by writing code for the generator, discriminator, and training loop, for each model. Code and data can be found [here](/static_files/assignments/hw3/16726_s21_hw3-main.zip). Our slides on this assignment are [here](/static_files/assignments/hw3/hw3_pptx.pptx).
 
 
 ## Part 1: Deep Convolutional GAN
 For the first part of this assignment, we will implement a Deep Convolutional GAN (DCGAN). A DCGAN is simply a GAN that uses a convolutional neural network as the discriminator, and a network composed of transposed convolutions as the generator. To implement the DCGAN, we need to specify three things: 1) the generator, 2) the discriminator, and 3) the training procedure. We will develop each of these three components in the following subsections.
 
 ### Implement Data Augmentation [10 points]
-DCGAN will perform poorly without data augmentation on small sized dataset because the discriminator can easily overfit to real dataset. To rescue, we need to add some data augmentation such as random crop and random horizontal flip.
+DCGAN will perform poorly without data augmentation on a small-sized dataset because the discriminator can easily overfit to a real dataset. To rescue, we need to add some data augmentation such as random crop and random horizontal flip.
 You need to fill in deluxe version of data augmentation in   `data_loader.py`. We provide some script for you to begin with. You need to compose them into a transform object which is passed to CustomDataset. 
 ```angular2html
     elif opts.data_aug == 'deluxe':
@@ -42,10 +42,10 @@ You need to fill in deluxe version of data augmentation in   `data_loader.py`. W
 ```
 
 ### Implement the Discriminator of the DCGAN [10 points]
-The discriminator in this DCGAN is a convolutional neural network that has the following architecture:
+The discriminator in this DCGAN is a convolutional neural network with the following architecture:
 {% include image.html url="/static_files/assignments/hw3/discriminator.png" %}
-1. Padding: In each of the convolutional layers shown above, we downsample the spatial dimension of the input volume by a factor of 2. Given that we use kernel size K = 4 and stride S = 2, what should the padding be? Write your answer in your website, and show your work (e.g., the formula you used to derive the padding).
-1. Implementation: Implement this architecture by filling in the `__init__` and `forward` method of the `DCDiscriminator` class in `models.py`, shown below. The `conv_dim` argument doesn't need to be changed unless you are using larger images, as it should specify the initial image size.
+1. Padding: In each of the convolutional layers shown above, we downsample the spatial dimension of the input volume by a factor of 2. Given that we use kernel size K = 4 and stride S = 2, what should the padding be? Write your answer on your website, and show your work (e.g., the formula you used to derive the padding).
+1. Implementation: Implement this architecture by filling in the `__init__` and `forward` method of the `DCDiscriminator` class in `models.py`, shown below. The `conv_dim` argument does not need to be changed unless you are using larger images, as it should specify the initial image size.
     ```angular2html
     def __init__(self, conv_dim=64):
           super(DCDiscriminator, self).__init__()
@@ -78,7 +78,7 @@ The discriminator in this DCGAN is a convolutional neural network that has the f
 Note: The function `conv` in `models.py` has an optional argument `norm`: if `norm`
 is `none`, then `conv` simply returns a `torch.nn.Conv2d` layer; if `norm` is `instance/batch`, then `conv` returns a network block that consists of a `Conv2d` layer followed by a `torch.nn.InstanceNorm2d/BatchNorm2d` layer. Use the `conv` function in your implementation.
 ## Generator [10 points]
-Now, we will implement the generator of the DCGAN, which consists of a sequence of transpose convolutional layers that progressively upsample the input noise sample to generate a fake image. The generator we’ll use in this DCGAN has the following architecture:
+Now, we will implement the generator of the DCGAN, which consists of a sequence of transpose convolutional layers that progressively upsample the input noise sample to generate a fake image. The generator in this DCGAN has the following architecture:
 {% include image.html url="/static_files/assignments/hw3/generator.png" %}
 
 
@@ -153,7 +153,7 @@ There are 5 bullet points in the code for training the discriminators, and 6 bul
 ### Cycle Consistency
 
 The most interesting idea behind CycleGANs (and the one from which they get their name) is the idea of introducing a cycle consistency loss to constrain the model. The idea is that when we translate an image from domain \\(X\\) to domain \\(Y\\), and then translate the generated image back to domain \\(X\\), the result should look like the original image that we started with.
-The cycle consistency component of the loss is the mean squared error between the input images and their reconstructions obtained by passing through both generators in sequence (i.e., fromdomain \\(X\\) to \\(Y\\) viathe \\(X \to Y\\) generator, and then from domain \\(Y\\) back to \\(X\\) via the \\(Y \to X\\) generator). The cycle consistency loss for the \\(Y \to X \to Y\\) cycle is expressed as follows:
+The cycle consistency component of the loss is the mean squared error between the input images and their reconstructions obtained by passing through both generators in sequence (i.e., from domain \\(X\\) to \\(Y\\) viathe \\(X \to Y\\) generator, and then from domain \\(Y\\) back to \\(X\\) via the \\(Y \to X\\) generator). The cycle consistency loss for the \\(Y \to X \to Y\\) cycle is expressed as follows:
 
 {% raw %}
 $$ \frac{1}{m}\sum_{i=1}^m ||y^{(i)} - G_{X\to Y}(G_{Y\to X}(y^{(i)}))||_p $$
@@ -167,10 +167,9 @@ if opts.use_cycle_consistency_loss:
     # cycle_consistency_loss = ...
     g_loss += cycle_consistency_loss
 ```
-EDIT: Here, we gave a L2 formulation of the cycle consistency loss. However, you might benefit from using an L1 loss as in the paper. If you go with L2, try a larger value of \\(\lambda_{\text{cycle}}\\).
-
+EDIT: Here, we gave an L2 formulation of the cycle consistency loss. However, you might benefit from using an L1 loss, as mentioned in the paper. If you go with L2, try a larger value of \\(\lambda\\). Both L1 and L2 loss will work. But they require different \\(\lambda\\).
 ### CycleGAN Experiments [15 points]
-Training the CycleGAN from scratch can be time-consuming if you don’t have a GPU. In this part, you will train your models from scratch for just 600 iterations, to check the results. 
+Training the CycleGAN from scratch can be time-consuming if you do not have a GPU. In this part, you will train your models from scratch for just 600 iterations, to check the results. 
 
 1. Train the CycleGAN without the cycle-consistency loss from scratch using the command:
 ```angular2html
@@ -191,22 +190,22 @@ Similarly, this runs for 600 iterations, and saves generated samples in the `out
 
 ## What you need to submit
 * Four code files: `models.py`, `vanilla_gan.py`, `data_loader.py` and `cycle_gan.py`.
-* A website submitted like the previous two homeworks following the instructions [here](/assignments/hw0/) containing samples generated by your DCGAN and
+* A website submitted like the previous two assignments following the instructions [here](/assignments/hw0/) containing samples generated by your DCGAN and
 CycleGAN models, and your answers to the written questions as specified in the previous sections.
 
 ## Bells & Whistles (Extra Points)
 Max of **10** points from the bells and whistles.
 {% include image.html url="/static_files/assignments/hw3/pokemon.png" %}
 
-* Get your GAN and / or CycleGAN to work on another dataset. We've included a dataset of different types of Pokemon **(2pts)** or you can find your own suitable one **(3pts)**.
+* Get your GAN and/or CycleGAN to work on another dataset. We have included a dataset of different types of Pokemon **(2pts)** or you can find your own suitable one **(3pts)**.
 * Implement a [patch discriminator](https://paperswithcode.com/method/patchgan) **(4pts)** so that you can force local features to look realistic.
-* Implement [differentiable data augmentation](https://proceedings.neurips.cc//paper/2020/file/55479c55ebd1efd3ff125f1337100388-Paper.pdf) for your generator **(2pts)** in order to make it more efficient with samples and force the discriminator to not memorize the dataset.
+* Implement [differentiable data augmentation](https://proceedings.neurips.cc//paper/2020/file/55479c55ebd1efd3ff125f1337100388-Paper.pdf) for your generator **(2pts)** to make it more efficient with samples and force the discriminator not to memorize the dataset.
 * Implement [spectral normalization](https://arxiv.org/pdf/1802.05957.pdf) **(2pts)** on your GANs for stability.
 * Do something cool with your model: Generate a GIF video or create a meme using your model (You can add your text manually.)  OR design a new pokemon?  Find directions in the latent space that can change the image in a meaningful way. **(up to 4 pts)**
 * Train your GAN to generate higher-resolution images **(up to 2 pts)** They are available at [this link](/static_files/assignments/hw3/high_res_images.tar.gz).
 * Find an improvement to the loss for DCGAN or CycleGAN and implement it **(4 pts)**.
 * Use a different type of generative model (like a VAE, PixelCNN, or flow-based model) for the same task **(up to 8 pts)**
-* Your own ideas you've cleared with the TAs.
+* Your own ideas you have cleared with the TAs.
 
 ## Further Resources
 * [Generative Adversarial Nets (Goodfellow et al., 2014)](https://arxiv.org/pdf/1406.2661.pdf)
