@@ -158,7 +158,7 @@ The cycle consistency component of the loss is the mean squared error between th
 {% raw %}
 $$ \frac{1}{m}\sum_{i=1}^m ||y^{(i)} - G_{X\to Y}(G_{Y\to X}(y^{(i)}))||_p $$
 {% endraw %}
-The loss for the \\(X \to Y \to X\\) cycle is analogous. Here the traditional choice of \\(p\\) is 1 but you can try 2 as well if you vary your \\(\lambda_{\text{cycle}\\). 
+The loss for the \\(X \to Y \to X\\) cycle is analogous. Here the traditional choice of \\(p\\) is 1 but you can try 2 as well if you vary your \\(\lambda_{\text{cycle}}\\).
 Implement the cycle consistency loss by filling in the following section in `cycle_gan.py`. Note that there are two such sections, and their implementations are identical except for swapping \\(X\\) and \\(Y\\). You must implement both of them.
 ```angular2html
 if opts.use_cycle_consistency_loss:
