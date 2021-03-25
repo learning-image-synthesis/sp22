@@ -156,9 +156,9 @@ The most interesting idea behind CycleGANs (and the one from which they get thei
 The cycle consistency component of the loss is the mean squared error between the input images and their reconstructions obtained by passing through both generators in sequence (i.e., fromdomain \\(X\\) to \\(Y\\) viathe \\(X \to Y\\) generator, and then from domain \\(Y\\) back to \\(X\\) via the \\(Y \to X\\) generator). The cycle consistency loss for the \\(Y \to X \to Y\\) cycle is expressed as follows:
 
 {% raw %}
-$$ \frac{1}{m}\sum_{i=1}^m (y^{(i)} - G_{X\to Y}(G_{Y\to X}(y^{(i)})))^2$$
+$$ \frac{1}{m}\sum_{i=1}^m ||y^{(i)} - G_{X\to Y}(G_{Y\to X}(y^{(i)}))||_p $$
 {% endraw %}
-The loss for the \\(X \to Y \to X\\) cycle is analogous.
+The loss for the \\(X \to Y \to X\\) cycle is analogous. Here the traditional choice of \\(p\\) is 1 but you can try 2 as well if you vary your \\(\lambda_{\text{cycle}\\). 
 Implement the cycle consistency loss by filling in the following section in `cycle_gan.py`. Note that there are two such sections, and their implementations are identical except for swapping \\(X\\) and \\(Y\\). You must implement both of them.
 ```angular2html
 if opts.use_cycle_consistency_loss:
@@ -167,7 +167,7 @@ if opts.use_cycle_consistency_loss:
     # cycle_consistency_loss = ...
     g_loss += cycle_consistency_loss
 ```
-EDIT: Here, we gave a L2 formulation of the cycle consistency loss. However, you might benefit from using an L1 loss as in the paper. If you go with L2, try a larger value of \\(\lambda\\).
+EDIT: Here, we gave a L2 formulation of the cycle consistency loss. However, you might benefit from using an L1 loss as in the paper. If you go with L2, try a larger value of \\(\lambda_{\text{cycle}}\\).
 
 ### CycleGAN Experiments [15 points]
 Training the CycleGAN from scratch can be time-consuming if you don’t have a GPU. In this part, you will train your models from scratch for just 600 iterations, to check the results. 
