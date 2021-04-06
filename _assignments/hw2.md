@@ -13,6 +13,10 @@ hide_from_announcments: true
 ---
 
 {% include image.html url="/static_files/assignments/hw2/penguins_with_shadow2.jpg" width=800 align="center" %}
+## Award Winners!
+We've completed the homework, grading, and voting, and the winner of our best assignment is [Manuel Rodriguez](http://www.andrew.cmu.edu/course/16-726/projects/manuelr/proj2/)
+
+Honorable Mention goes to [George Cazanavette](http://www.andrew.cmu.edu/course/16-726/projects/gcazenav/proj2/). Great work to all and check out the winning projects!
 ## Background
 This project explores gradient-domain processing, a simple technique with a broad set of applications including blending, tone-mapping, and non-photorealistic rendering. For the core project, we will focus on "Poisson blending"; tone-mapping and NPR can be investigated as bells and whistles.
 
