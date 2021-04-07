@@ -13,7 +13,7 @@ hide_from_announcments: true
 
 
 {% include image.html url="/static_files/assignments/project/teaser.png" %}
-TODO: cite this
+This image was taken from [State of the Art on Neural Rendering](https://arxiv.org/abs/2004.03805) by Tewari et al.
 
 ## Introduction
 
@@ -37,3 +37,5 @@ You'll need to give a 5-minute presentation about your project in class. We'll a
 ## Code and Website Submission
 
 You'll need to submit (1) the code for your project to canvas and (2) a website in the `project` directory of your website for the course as you did for other projects. This time, we'd really want to see through the description of the method, outputs of comparison methods (if applicable), the outputs of your algorithm, any math you do, and ablations if applicable. This will be the primary deliverable, and we encourage you all to do a good job with it, as you'll be able to show people what you've made in a nicely presented way.
+
+Good luck!
