@@ -23,9 +23,9 @@ Welcome to the final project for the class. The purpose is to show us something 
 You can work in groups of 1-3 people. We'll expect the standard of work to be roughly proportional to the number of members in your group. In other words, larger groups will be graded to a somewhat higher standard as far as the scale of the project attempted and the amount of work completed.
 
 ## Important Dates
-__4/14:__ Project Proposal Due
-__TBD:__ Presentation Date
-__5/17:__ Project Code and Website Due
+__4/14:__ Project Proposal Due 
+__TBD:__ Presentation Date 
+__5/17:__ Project Code and Website Due 
 
 
 ## Project Proposal
