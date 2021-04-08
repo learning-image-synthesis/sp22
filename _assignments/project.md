@@ -27,6 +27,8 @@ __4/14:__ Project Proposal Due
 __TBD:__ Presentation Date 
 __5/17:__ Project Code and Website Due 
 
+__Note:__ We will not allow late days on the project.
+
 
 ## Project Proposal
 We'd like to see a couple of paragraphs describing what you want to do for your project. Be sure to describe the end output, technique, novelty, dataset usage, and action plan. Include a couple of sentences placing your project proposal in context among related works. Submit this work as a pdf file to canvas. Feel free to include images or your hand-drawn figures. The page limit is two pages, but one page should be more than enough. 
