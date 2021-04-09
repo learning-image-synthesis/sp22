@@ -1,8 +1,8 @@
 ---
 type: lecture
-date: 2021-04-04T16:00:00-05:00
+date: 2021-04-05T16:00:00-05:00
 title: "Image Editing and Optimization (part 2)"
-thumbnail: "/static_files/lectures/2021_03_29_teaser.png"
+# thumbnail: "/static_files/lectures/2021_03_29_teaser.png"
 tldr: "Use an optimization algorithm in a learned space to achieve photo manipulation"
 hide_from_announcments: true
 links:
