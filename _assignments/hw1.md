@@ -8,6 +8,17 @@ due_event:
     type: due
     date: 2021-02-24T23:59:00-5:00
     description: 'Assignment #1 due'
+
+runnerup:
+    - name: Juyong Kim
+      link: http://www.andrew.cmu.edu/course/16-726/projects/juyongk/proj1/
+    - name: Zihang Lai
+      link: http://www.andrew.cmu.edu/course/16-726/projects/zihangl/proj1/
+    - name: Manuel Rodriguez 
+      link: http://www.andrew.cmu.edu/course/16-726/projects/manuelr/proj1/
+winner: 
+    - name: Konwoo Kim
+      link: http://www.andrew.cmu.edu/course/16-726/projects/konwook/proj1/
 hide_from_announcments: true
 ---
 

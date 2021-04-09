@@ -9,6 +9,13 @@ due_event:
     date: 2020-03-10T23:59:00-5:00
     description: 'Assignment #2 due'
 mathjax: true
+runnerup:
+    - name: George Cazanavette
+      link: http://www.andrew.cmu.edu/course/16-726/projects/gcazenav/proj2/
+winner:
+    - name: Manuel Rodriguez
+      link: http://www.andrew.cmu.edu/course/16-726/projects/manuelr/proj2/
+  
 hide_from_announcments: true
 ---
 
