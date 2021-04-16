@@ -12,148 +12,72 @@ mathjax: true
 hide_from_announcments: true
 ---
 
+$$
+\DeclareMathOperator{\argmin}{arg min}
+\newcommand{\L}{\mathcal{L}}
+\newcommand{\Latent}{\tilde{\mathbb{Z}}}
+\newcommand{\R}{\mathbb{R}}
+$$
 
 {% include image.html url="/static_files/assignments/hw4/teaser.png" %}
 Content image (left): [Fallingwater](https://fallingwater.org/), place of interest near Pittsburgh. Style image (middle): the art [Self-Portrait with Thorn Necklace and Hummingbird](https://www.fridakahlo.org/self-portrait-with-thorn-necklace-and-hummingbird.jsp) by [Frida Kahlo](https://www.fridakahlo.org/frida-kahlo-biography.jsp) Output (right): Frida-Kahlo-ized Fallingwater. 
 
 ## Introduction
-In this assignment, you will implement neural style transfer which resembles specific content in a certain artistic style. For example, generate cat images in Ukiyo-e style. The algorithm takes in a content image, a style image, and another input image. The input image is optimized to match the previous two target images in content and style distance space.
+In this assignment, you will implement a few different techniques that require you to manipulate images on the manifold of natural images. First, we'll `invert' a trained generator to find a latent variable which generates an image very similar to one given. In the second part of the assigment, we'll take a sketch that you input and generate an image that fits the sketch from our latent space.
 
-In the first part of the assignment, you will start from random noise and optimize it in content space. It helps you get familiar with the general idea of optimizing pixels with respect to certain losses.  In the second part of the assignment, you will ignore content for a while and only optimize to generate textures. This builds some intuitive connection between style-space distance and gram matrix.  Lastly, we combine all of these pieces to perform neural style transfer.
+We have provided the starter code and test images [here](/static_files/assignments/hw5/hw5_starter.tar.gz).
 
-We have provided the starter code and test images [here](/static_files/assignments/hw4/hw4_starter.tar.gz).
+## Setup
 
-## Part 1: Content Reconstruction [30 points]
-For the first part of the assignment, you will implement content-space loss and optimize a random noise with respect to the content loss only.
+This assignment is a little bit more picky about dependencies than the previous ones. You need to run the following command in a fresh virtualenv with a recent Python version:
 
+`pip install click requests tqdm pyspng ninja imageio-ffmpeg==0.4.3`.
 
-__Content Loss:__ The content loss is a metric function that measures the content distance between two images at a certain individual layer. Denote the Lth-layer feature of input image X as $f_X^L$ and that of target content image as $f_C^L$. The content loss is defined as squared L2-distance of these two features $\|f_X^L - f_C^L\|^2_2$.
+Furthermore you need to make sure as you also install PyTorch that its version is at least 1.7.1 and your major CUDA version is 11.
 
-Implement content loss in the code:
-```angular2html
-class ContentLoss(nn.Module):
-    def __init__(self, target,):
-        super(ContentLoss, self).__init__()
-        # you need to `detach' the target content from the graph used to
-        # compute the gradient in the forward pass that made it so that we don't track
-        # those gradients anymore
-        # self.target = TODO
-        raise NotImplementedError()
+## Part 1: Inverting the Generator [X pts]
+For the first part of the assignment, you'll solve an optimization problem to reconstruct the image from a particular latent code. As we've discussed in class, natural images lie on a manifold in image space. We choose to consider the output manifold of a trained generator as close to the natural image manifold. So, we can set up the following nonconvex optimization problem:
 
-    def forward(self, input):
-        # this needs to be a passthrough where you save the appropriate loss value
-        # self.loss = TODO
-        raise NotImplementedError()
-    return input
-```
+For some choice of loss \\(\L\\) and trained generator \\(G\\) and given some real image \\(x^R\\), we can write
 
-__Feature extractor and Loss Insertion:__ Of course when $L$ equals 0, content-loss is just an L2 pixel loss, which does not resemble content. The content loss is actually in the feature space. To extract the feature, a [VGG-19]() net pre-trained on ImageNet is used. The pre-trained VGG-19 net consists of 5 convolution blocks (conv1-conv5) and each block serves as a feature extractor at the different abstract levels. 
+$$ z^* = \argmin_{z \in \Latent} \L(G(z), x^R).$$
 
-The pre-trained VGG-19 can be directly imported from `torchvision.models` module and the loading utility has been (almost) provided in the starter code. Write your code to append content loss to the end of specific layers (will be ablated soon) to optimize.
-```angular2html
-def get_model_and_losses(cnn, style_img, content_img,
-                               content_layers=content_layers_default,
-                               style_layers=style_layers_default):
-    # just in order to have an iterable access to or list of content/syle
-    # losses
-    content_losses = []
-    style_losses = []
-    ...
-    return model, style_losses, content_losses
+Here, the only thing left undefined is the loss function. One theme of this course is that the standard Lp losses aren't great for image tasks. So we recommend you try out the Lp losses as well as some combination of the perceptual (style and content) losses from the previous assigment. As this is a nonconvex optimization problem where we have access to gradients, we can attempt to solve it with any first-order optimization method. One issue here is that these optimizations can be unstable. Try running the optimization from many random seeds and taking a stable solution with low loss as the one you output.
 
-```
+### Implementation
+TODO (viraj): fill this in so it matches the code
 
-__Optimization:__ In contrast with assignment 3 where we optimize the parameters of a neural network, in assignment 4 we fix the neural network and optimize the pixel values of the input image. Here we use a quasi-newton optimizer `LBFGS` to optimize the image `optimizer = optim.LBFGS([input_img.requires_grad_()])`. The optimizer involves reevaluate your function multiple times so rather than a simple `loss.backward()`, we need to specify a hook  `closure` that performs 1) clear the gradient, 2) compute loss and gradient 3) return the loss.
+### Deliverables
 
-Please complete  `run_optimization` and the `closure` function within:
-```angular2html
-def run_optimization(cnn, content_img, style_img, input_img, use_content=True, use_style=True, num_steps=300, style_weight=1000000, content_weight=1):
-    """Run the image reconstruction, texture synthesis, or style transfer."""
-    # get your model, style, and content losses
+Show some example outputs of your image reconstruction efforts using various combinations of the losses. Give comments on why the various outputs look how they do.
 
-    # get the optimizer
-    # opt = = LBFGS(...)
-    def closure():
-        # here
-        # which does the following:
-        # clear the gradients
-        # compute the loss and it's gradient
-        return the loss
-    return input_img
-```
+## Sketch to Image [X Points]
+Next, we'd like to constrain our generated image in some way while having it look realistic. This constraints could be sketch constraints as we initially tackle in this problem, but could be many other things as well. We'll initially develop this method in general and then talk about sketch constraints in particular. In order to generate an image subject to constraints, we solve a penalized nonconvex optimization problem. We'll assume the constraints are of the form \\(\{f_g(x) == v_g\}_{g}\\).
 
-__Experiment__:
-1. Report the effect of optimizing content loss at different layers. [15 points]
-1. Choose your favorite one (specify it on the website). Take two random noises as two input images, optimize them only with content loss. Please include your results on the website and compare each other with the content image. [15 points]
+Written in a form that includes our trained generator \\(G\\), this soft-constrained optimization problem is
+$$z^* = \argmin_{z \in \Latent} \sum_g ||f_g(G(z)) - v_g||^2.$$
 
-## Part 2: Texture Synthesis [30 points]
-Now let us implement style-space loss in this part.
+__Sketch Constraints:__
+Here, we allow for an initial sketch which will be painted in by the GAN. Say we have a sketch image \\(s \in \R^d\\) with a corresponding mask \\(m \in {0, 1}^d\\). Then for each pixel in the mask, we can add a constraint that the corresponding pixel in the generated image must be equal to the sketch, which might look like \\(m_i x_i = m_i s_i\\).
 
-__Style loss:__ How do we measure the distance of the styles of two images? In the course, we discussed that the Gram matrix is used as a style measurement. Gram matrix is the correlation of two vectors on every dimension. Specifically, denote the k-th dimension of the Lth-layer feature of an image as $f^L_k$ in the shape of $(N, K, H*W)$. Then the gram matrix is $G = f^L_k (f^L_k)^T$ in the shape of (N, K, K).  The idea is that two of the gram matrix of our optimized and predicted feature should be as close as possible.
+### Implementation
 
-Please implement the style loss and gram matrix in the code:
-```angular2html
-def gram_matrix(activations):
-    a, b, c, d = activations.size()  # a=batch size(=1)
-    
-    # 'normalize' the values of the gram matrix
-    # by dividing by the number of element in each feature maps. 
-    return normalized_gram
+TODO (viraj): fill this in so it matches the code
 
-class StyleLoss(nn.Module):
-    def __init__(self, target_feature):
-        super(StyleLoss, self).__init__()
-        # self.target = TODO
-        
-    def forward(self, input):
-        # self.loss = TODO
-        return input
-```
+### Deliverables
 
-__Applying loss:__ Similar to part one, please insert the implemented style loss to the desired layers, which you will report their different effect at different layers. 
-
-__Optimization:__ If you write `run_optimization` smartly, lots of code can be reused by setting the function argument as 0/1.  Please modify those parameters accordingly in order to only optimize style loss.
-
-__Experiment:__
-1. Report the effect of optimizing texture loss at different layers. Use one of the configurations; specify it in the website and: [15 points]
-1. Take two random noises as two input images, optimize them only with style loss. Please include your results on the website and compare these two synthesized textures. [15 points]
-
-## Part 3: Style Transfer [40 points]
-Finally, it is time to put pieces together!
-
-__Applying Losses:__ The building blocks are almost ready. You need to insert both content and style loss to some certain layers. 
-
-__Experiment:__
-1. Tune the hyper-parameters until you are satisfied. Pay special attention to whether your gram matrix is normalized over feature pixels or not. It will result in different hyper-parameters by an order of 4-5. Please briefly describe your implementation details on the website.  [10 points]
-1. Please report at least a 2x2 grid of results that are optimized from two content images mixing with two style images accordingly. (Remember to also include content and style images therefore the grid is actually 3x3) [10 points]
-1. Take input as random noise and a content image respectively.  Compare their results in terms of quality and running time. [10 points]
-1. Try style transfer on some of your favorite images. [10 points]
-
-## What you need to submit
-* Three code files and any necessary files to run your code: `run.py`, `style_and_content.py`, `utils.py`.
-* A website submitted like the previous homework following the instructions [here](/assignments/hw0/) containing samples of content reconstruction, texture synthesis, and style transfer.
-
+Sketch some cats and see what your model can come up with! Experiment with sparser and denser sketches and the use of color. Show us a handful of example outputs along with your commentary on what seems to have happened and why.
 
 ## Bells & Whistles (Extra Points)
 Max of **10** points from the bells and whistles.
-- Stylize your grump cats or Poisson blended images from the previous homework. (2pts)
-- Apply style transfer to a video. You could try frame by frame method (2pts) or applying temporal smoothness for better output(4pts). [Artistic style transfer for videos, Ruder et al. 2016](https://arxiv.org/abs/1604.08610)  
-- Add some spatial control by masking out certain regions (4 pts). [Controlling Perceptual Factors in Neural Style Transfer, Gatys et al. 2017](https://arxiv.org/abs/1611.07865) Sec 4
--  Add histogram loss to make your results more stable  (4 pts). [Stable and Controllable Neural Texture Synthesis and Style Transfer Using Histogram Losses, Risser1 et al. 2017](https://arxiv.org/pdf/1701.08893.pdf), Sec 4.3
-- Use a feedforward network to output style transfer results directly (8 pts). You can use or modify the CycleGAN generator network used in HW3. [Perceptual Losses for Real-Time Style Transfer
-  and Super-Resolution, Johnson et al. 2016](https://cs.stanford.edu/people/jcjohns/papers/eccv16/JohnsonECCV16.pdf)
-- Use a feedforward network to synthesize texture  (8 pts): You can use or modify the CycleGAN generator network used in HW3.  [Non-Stationary Texture Synthesis by Adversarial Expansion, Zhou et al. 2018](https://arxiv.org/abs/1805.04487)
-- Other brilliant idea you come up with. (5pts)
-
-
-
+- Use gradients from the discriminator to push your generated images to look even more realistic (2pts). See equation 5 of [this paper](https://arxiv.org/pdf/1609.03552.pdf) for details.
+- Implement addtional types of constraints. (3pts) The same paper gives you the ability to use HOG features to make the visual cues more approximate and structural rather than exact color.
+- Train a neural network to approximate the inverse generator (2pts) for faster inversion and use the inverted latent code to initialize your optimization problem (1 additional point).
+- Other brilliant ideas you come up with. (5pts)
 
 
 ## Further Resources
-- [Texture Synthesis Using Convolutional Neural
-  Networks, Gatys et al., 2015](https://arxiv.org/pdf/1505.07376.pdf)
-- [A Neural Algorithm of Artistic Style, Gatys et al., 2015
-  ](https://arxiv.org/pdf/1508.06576.pdf)
+- [Generative Visual Manipulation on the Natural Image Manifold](https://arxiv.org/pdf/1609.03552.pdf)
 
-__Acknowledgement__:
-The assignment is credit to Pytorch tutorial [neural transfer](https://pytorch.org/tutorials/advanced/neural_style_tutorial.html).
+__Authors__:
+This assigment was written by Jun-Yan Zhu, Viraj Mehta, and Yufei Ye
