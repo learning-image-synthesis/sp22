@@ -38,7 +38,7 @@ Furthermore you need to make sure as you also install PyTorch that its version i
 
 All the code you need to write is in `main.py`.
 
-## Part 1: Inverting the Generator [X pts]
+## Part 1: Inverting the Generator [30 pts]
 For the first part of the assignment, you'll solve an optimization problem to reconstruct the image from a particular latent code. As we've discussed in class, natural images lie on a manifold in image space. We choose to consider the output manifold of a trained generator as close to the natural image manifold. So, we can set up the following nonconvex optimization problem:
 
 For some choice of loss \\(\L\\) and trained generator \\(G\\) and given some real image \\(x\\), we can write
@@ -60,7 +60,7 @@ Here, the only thing left undefined is the loss function. One theme of this cour
 
 Show some example outputs of your image reconstruction efforts using various combinations of the losses. Give comments on why the various outputs look how they do.
 
-## Part 2: Interpolate your Cats
+## Part 2: Interpolate your Cats [10 pts]
 Now that we have a technique for inverting the cat images, we can do arithmetic with the latent vectors we've found. One simple example is interpolating through images via a convex combination of their inverses. More precisely, given images \\(x_1\\) and \\(x_2\\), compute \\(z_1 = G^{-1}(x_1), z_2 = G^{-1}(x_2)\\). Then we can combine the latent images for some \\(\theta \in (0, 1)\\) by \\(z' = \theta z_1 + (1 - \theta) z_2\\) and generate it via \\(x' = G(z')\\). Choose a discretization of \\((0, 1)\\) to interpolate your image pair.
 
 ### Implementation
@@ -70,7 +70,7 @@ Now that we have a technique for inverting the cat images, we can do arithmetic 
 
 Show a few interpolations between grumpy cats. Comment on the quality of the images between the cats and how the interpolation proceeds visually.
 
-## Part 3: Sketch to Image [X Points]
+## Part 3: Sketch to Image [40 Points]
 Next, we'd like to constrain our generated image in some way while having it look realistic. This constraints could be sketch constraints as we initially tackle in this problem, but could be many other things as well. We'll initially develop this method in general and then talk about sketch constraints in particular. In order to generate an image subject to constraints, we solve a penalized nonconvex optimization problem. We'll assume the constraints are of the form \\(\{f_i(x) = v_i\}\\) for some scalar-valued functions \\(f_i\\) and scalar values \\(v_i\\).
 
 Written in a form that includes our trained generator \\(G\\), this soft-constrained optimization problem is
