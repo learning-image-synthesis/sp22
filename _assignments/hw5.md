@@ -19,8 +19,8 @@ $$
 \newcommand{\R}{\mathbb{R}}
 $$
 
-{% include image.html url="/static_files/assignments/hw4/teaser.png" %}
-Content image (left): [Fallingwater](https://fallingwater.org/), place of interest near Pittsburgh. Style image (middle): the art [Self-Portrait with Thorn Necklace and Hummingbird](https://www.fridakahlo.org/self-portrait-with-thorn-necklace-and-hummingbird.jsp) by [Frida Kahlo](https://www.fridakahlo.org/frida-kahlo-biography.jsp) Output (right): Frida-Kahlo-ized Fallingwater. 
+{% include image.html url="/static_files/assignments/hw5/teaser.png" %}
+An example of grumpy cat outputs generated from sketch inputs using this assignment's output.
 
 ## Introduction
 In this assignment, you will implement a few different techniques that require you to manipulate images on the manifold of natural images. First, we'll `invert' a trained generator to find a latent variable which generates an image very similar to one given. In the second part of the assigment, we'll take a sketch that you input and generate an image that fits the sketch from our latent space.
@@ -54,6 +54,8 @@ Here, the only thing left undefined is the loss function. One theme of this cour
 
 
 ### Deliverables
+{% include image.html url="/static_files/assignments/hw5/interpolation.gif" align="left" width=200 %}
+
 
 Show some example outputs of your image reconstruction efforts using various combinations of the losses. Give comments on why the various outputs look how they do.
 
@@ -86,6 +88,10 @@ where \\(*\\) is the Hadamard product, \\(M\\) is the mask, and \\(S\\) is the s
 ### Implementation
 
 * Implement the code for synthesizing images from drawings to realistic ones using the optimization procedure above in `draw`.
+* You can use [this website](https://sketch.io/sketchpad/) to generate simple sketch images of cats in your browser.
+* We've provided here a color palette of colors which typically show up in grumpy cats along with their hex codes. You might find better results by using these common colors. The hex codes corresponding to these are (from left to right): #24201d, #d2cdc7, #5a372e, #745e37, #636562, #896c5f, #9f8a68, #909391, #af958c, #1cb843.
+{% include image.html url="/static_files/assignments/hw5/color_palette.png" %}
+
 
 ### Deliverables
 
