@@ -25,7 +25,7 @@ Content image (left): [Fallingwater](https://fallingwater.org/), place of intere
 ## Introduction
 In this assignment, you will implement a few different techniques that require you to manipulate images on the manifold of natural images. First, we'll `invert' a trained generator to find a latent variable which generates an image very similar to one given. In the second part of the assigment, we'll take a sketch that you input and generate an image that fits the sketch from our latent space.
 
-We have provided the starter code and test images [here](/static_files/assignments/hw5/hw5_starter.tar.gz).
+We have provided the starter [code](/static_files/assignments/starter.tar) and data and model file [here](https://drive.google.com/file/d/161V3oaL_SvV4qlxBs-kjl9XJlHcF3V4k/view?usp=sharing). You can try each problem with a vanilla gan (in `vanilla/`) or a StyleGAN (in `stylegan`).
 
 ## Setup
 
@@ -34,6 +34,8 @@ This assignment is a little bit more picky about dependencies than the previous 
 `pip install click requests tqdm pyspng ninja imageio-ffmpeg==0.4.3`.
 
 Furthermore you need to make sure as you also install PyTorch that its version is at least 1.7.1 and your major CUDA version is 11.
+
+All the code you need to write is in `main.py`.
 
 ## Part 1: Inverting the Generator [X pts]
 For the first part of the assignment, you'll solve an optimization problem to reconstruct the image from a particular latent code. As we've discussed in class, natural images lie on a manifold in image space. We choose to consider the output manifold of a trained generator as close to the natural image manifold. So, we can set up the following nonconvex optimization problem:
@@ -45,7 +47,11 @@ $$ z^* = \argmin_{z} \L(G(z), x).$$
 Here, the only thing left undefined is the loss function. One theme of this course is that the standard Lp losses aren't great for image tasks. So we recommend you try out the Lp losses as well as some combination of the perceptual (style and content) losses from the previous assigment. As this is a nonconvex optimization problem where we have access to gradients, we can attempt to solve it with any first-order optimization method. One issue here is that these optimizations can be unstable. Try running the optimization from many random seeds and taking a stable solution with low loss as the one you output.
 
 ### Implementation
-TODO (viraj): fill this in so it matches the code
+* Fill out the `forward` function in the `Criterion` class. You'll need to implement each of the losses as well as a way of combining them. Feel free to add whatever arguments you want to accomplish this and properly configure your class. You may need to pass your input image into the loss to make this work. Feel free to include code from previous assignments. Do this in a way that works whether a mask is included or not.
+* You'll also need to implement `sample_noise` -- this is obviously easy for the vanilla gan but you should implement the sampling procedure for StyleGAN as well.
+* Next, implement the optimization step. We've included a different implementation of LBFGS as this one includes line search for step size. You should implement this in a general fashion so that you can reuse it.
+* Finally, implement the whole functionality in `project` so you can run the inversion code.
+
 
 ### Deliverables
 
@@ -55,7 +61,7 @@ Show some example outputs of your image reconstruction efforts using various com
 Now that we have a technique for inverting the cat images, we can do arithmetic with the latent vectors we've found. One simple example is interpolating through images via a convex combination of their inverses. More precisely, given images \\(x_1\\) and \\(x_2\\), compute \\(z_1 = G^{-1}(x_1), z_2 = G^{-1}(x_2)\\). Then we can combine the latent images for some \\(\theta \in (0, 1)\\) by \\(z' = \theta z_1 + (1 - \theta) z_2\\) and generate it via \\(x' = G(z')\\). Choose a discretization of \\((0, 1)\\) to interpolate your image pair.
 
 ### Implementation
-TODO (viraj): fill this in so it matches the code
+* Implement the interpolation step in `interpolate` where you project, interpolate, and reconstructe the images and save them in image_list so that you can render a gif of the images smoothly transitioning.
 
 ### Deliverables
 
@@ -79,7 +85,7 @@ where \\(*\\) is the Hadamard product, \\(M\\) is the mask, and \\(S\\) is the s
 
 ### Implementation
 
-TODO (viraj): fill this in so it matches the code
+* Implement the code for synthesizing images from drawings to realistic ones using the optimization procedure above in `draw`.
 
 ### Deliverables
 
