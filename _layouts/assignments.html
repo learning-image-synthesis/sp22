@@ -5,6 +5,7 @@ layout: page
 {{ content }}
 <ul id="archive" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
     {% for asg in site.assignments %}
+    {% if true != asg.hidden %}
     <li class="archiveposturl" style="background: transparent">
         <div class="lecture-container">
             {% if asg.thumbnail %}
@@ -31,5 +32,6 @@ layout: page
 
         </div>
     </li>
+    {% endif %}
     {% endfor %}
 </ul>
