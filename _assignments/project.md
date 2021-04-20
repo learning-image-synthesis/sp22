@@ -1,6 +1,6 @@
 ---
 type: assignment
-date: 2021-04-07T4:00:00-5:00
+date: 2021-04-20T4:00:00-5:00
 title: 'Final Project'
 thumbnail: /static_files/assignments/project/teaser.png
 due_event:
