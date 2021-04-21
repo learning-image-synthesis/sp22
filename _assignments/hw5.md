@@ -19,7 +19,7 @@ $$
 \newcommand{\R}{\mathbb{R}}
 $$
 
-{% include image.html url="/static_files/assignments/hw5/teaser.png" %}
+{% include image.html url="/static_files/assignments/hw5/teaser.gif" %}
 An example of grumpy cat outputs generated from sketch inputs using this assignment's output.
 
 ## Introduction
