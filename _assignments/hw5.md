@@ -2,7 +2,7 @@
 type: assignment
 date: 2021-04-19T4:00:00-5:00
 title: 'Assignment #5 - GAN Photo Editing'
-thumbnail: /static_files/assignments/hw5/teaser.gif
+thumbnail: /static_files/assignments/hw5/thumb.gif
 attachment: /static_files/assignments/hw5/hw5_starter.tar.gz
 due_event:
     type: due
@@ -25,7 +25,7 @@ An example of grumpy cat outputs generated from sketch inputs using this assignm
 ## Introduction
 In this assignment, you will implement a few different techniques that require you to manipulate images on the manifold of natural images. First, we will invert a pre-trained generator to find a latent variable that closely reconstructs the given real image. In the second part of the assignment, we will take a hand-drawn sketch and generate an image that fits the sketch accordingly.
 
-We have provided the starter [code](/static_files/assignments/starter.tar) and data and model file [here](https://drive.google.com/file/d/161V3oaL_SvV4qlxBs-kjl9XJlHcF3V4k/view?usp=sharing). You can try each problem with vanilla gan (in `vanilla/`) or a StyleGAN (in `stylegan`).
+We have provided the starter [code](/static_files/assignments/starter.tar) and data and model file [here](https://drive.google.com/file/d/17IY0N7fKffdUl0MIsEx9fJ2FlyC64hN1/view?usp=sharing). You can try each problem with vanilla gan (in `vanilla/`) or a StyleGAN (in `stylegan`).
 
 ## Setup
 
@@ -104,7 +104,7 @@ Max of **15** points from the bells and whistles.
 - Implement additional types of constraints. (3pts each): e.g., sketch/shape constraint and warping constraints mentioned in the iGAN paper, or texture constraint using a style loss. 
 - Train a neural network to approximate the inverse generator (4pts) for faster inversion and use the inverted latent code to initialize your optimization problem (1 additional point).
 - Develop a cool user interface and record a UI demo (4 pts). Write a cool front end for your optimization backend. 
-- Experiment with high-res models of Grumpy Cat (2 pts) or other datasets (e.g., faces, pokemon) (2pts)
+- Experiment with high-res models of Grumpy Cat (2 pts) [data and pretrained weight from here](https://drive.google.com/file/d/1p9SlAZ_lwtewEM-UU6GvYEdQWTV1K-_g/view?usp=sharing) or other datasets (e.g., faces, pokemon) (2pts) 
 - Other brilliant ideas you come up with. (up to 5pts)
 
 
