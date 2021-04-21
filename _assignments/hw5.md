@@ -2,7 +2,7 @@
 type: assignment
 date: 2021-04-19T4:00:00-5:00
 title: 'Assignment #5 - GAN Photo Editing'
-thumbnail: /static_files/assignments/hw5/teaser.png
+thumbnail: /static_files/assignments/hw5/teaser.gif
 attachment: /static_files/assignments/hw5/hw5_starter.tar.gz
 due_event:
     type: due
@@ -19,7 +19,7 @@ $$
 \newcommand{\R}{\mathbb{R}}
 $$
 
-{% include image.html url="/static_files/assignments/hw5/teaser.png" %}
+{% include image.html url="/static_files/assignments/hw5/teaser.gif" %}
 An example of grumpy cat outputs generated from sketch inputs using this assignment's output.
 
 ## Introduction
