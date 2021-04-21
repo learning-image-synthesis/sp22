@@ -3,7 +3,7 @@ type: assignment
 date: 2021-04-19T4:00:00-5:00
 title: 'Assignment #5 - GAN Photo Editing'
 thumbnail: /static_files/assignments/hw5/thumb.gif
-attachment: /static_files/assignments/hw5/hw5_starter.tar.gz
+attachment: /static_files/assignments/hw5/hw5_starter.tar
 due_event:
     type: due
     date: 2021-04-30T23:59:00-5:00
