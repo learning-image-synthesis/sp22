@@ -91,8 +91,8 @@ where \\(*\\) is the Hadamard product, \\(M\\) is the mask, and \\(S\\) is the s
 
 * Implement the code for synthesizing images from drawings to realistic ones using the optimization procedure above in `draw`.
 * You can use [this website](https://sketch.io/sketchpad/) to generate simple color scribble images of cats in your browser.
-* We've provided here a color palette of colors which typically show up in grumpy cats along with their hex codes. You might find better results by using these common colors. The hex codes corresponding to these are (from left to right): #24201d, #d2cdc7, #5a372e, #745e37, #636562, #896c5f, #9f8a68, #909391, #af958c, #1cb843.
-{% include image.html url="/static_files/assignments/hw5/color_palette.png" %}
+* We've provided here a color palette of colors which typically show up in grumpy cats along with their hex codes. You might find better results by using these common colors.
+{% include image.html url="/static_files/assignments/hw5/colormap.png" %}
 
 
 ### Deliverables
