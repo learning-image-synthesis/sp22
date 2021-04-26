@@ -1,15 +1,10 @@
 ---
 type: lecture
 date: 2021-04-19T16:00:00-05:00
-title: "Even More Face Models"
-thumbnail: "/static_files/lectures/face_modeling.png"
+title: "Face Modeling (student presentations)"
+thumbnail: "/static_files/lectures/face_modeling_obama.png"
 tldr: "What special techniques can we use to generate and manipulate realistic faces?"
 hide_from_announcments: true
-links:
-    - url: "http://www.andrew.cmu.edu/course/16-726/static_files/2021_04_19_face_modeling2.pptx"
-      name: pptx
-    - url: "http://www.andrew.cmu.edu/course/16-726/static_files/2021_04_19_face_modeling2.pdf"
-      name: pdf
 ---
 Reading List:
 - [Face2Face: Real-time Face Capture and Reenactment of RGB Videos, Theis et al, CVPR 2016](https://openaccess.thecvf.com/content_cvpr_2016/papers/Thies_Face2Face_Real-Time_Face_CVPR_2016_paper.pdf)

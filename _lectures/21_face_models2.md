@@ -1,10 +1,15 @@
 ---
 type: lecture
 date: 2021-04-14T16:00:00-05:00
-title: "More Face Models"
-thumbnail: "/static_files/lectures/face_modeling.png"
+title: "Face Modeling (part 2)"
+thumbnail: "/static_files/lectures/face_modeling2.png"
 tldr: "What special techniques can we use to generate and manipulate realistic faces?"
 hide_from_announcments: true
+links:
+    - url: "http://www.andrew.cmu.edu/course/16-726/static_files/2021_04_19_face_modeling2.pptx"
+      name: pptx
+    - url: "http://www.andrew.cmu.edu/course/16-726/static_files/2021_04_19_face_modeling2.pdf"
+      name: pdf
 ---
 Reading List:
 - [Reducing the dimensionality of data with neural networks, Hinton & Salakhutdinov, Science 2006](https://science.sciencemag.org/content/313/5786/504)

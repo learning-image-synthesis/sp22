@@ -1,7 +1,7 @@
 ---
 type: lecture
 date: 2021-04-12T16:00:00-05:00
-title: "Face Models"
+title: "Face Modeling (part 1)"
 thumbnail: "/static_files/lectures/face_modeling.png"
 tldr: "What special techniques can we use to generate and manipulate realistic faces?"
 hide_from_announcments: true
