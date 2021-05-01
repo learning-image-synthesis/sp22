@@ -6,7 +6,7 @@ thumbnail: /static_files/assignments/hw5/thumb.gif
 attachment: /static_files/assignments/hw5/starter.tar
 due_event:
     type: due
-    date: 2021-04-30T23:59:00-5:00
+    date: 2021-05-03T23:59:00-5:00
     description: 'Assignment #5 due'
 mathjax: true
 hide_from_announcments: true
