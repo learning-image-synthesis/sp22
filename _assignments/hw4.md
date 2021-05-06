@@ -9,6 +9,14 @@ due_event:
     date: 2021-04-12T23:59:00-5:00
     description: 'Assignment #4 due'
 mathjax: true
+winner:
+    - name: Zihang Lai
+      link: http://www.andrew.cmu.edu/course/16-726/projects/zihangl/proj4/
+runnerup:
+    - name: Zijie Li
+      link: http://www.andrew.cmu.edu/course/16-726/projects/zijieli/proj4/
+    - name: Tarang Shah
+      link: http://www.andrew.cmu.edu/course/16-726/projects/tarangs/proj4/
 hide_from_announcments: true
 ---
 

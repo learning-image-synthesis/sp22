@@ -9,6 +9,12 @@ due_event:
     date: 2021-03-29T23:59:00-5:00
     description: 'Assignment #3 due'
 mathjax: true
+runnerup:
+    - name: George Cazanavette
+      link: http://www.andrew.cmu.edu/course/16-726/projects/gcazenav/proj3/
+winner:
+    - name: Jun Luo
+      link: http://www.andrew.cmu.edu/course/16-726/projects/junluo2/proj3/
 hide_from_announcments: true
 ---
 
