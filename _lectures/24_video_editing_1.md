@@ -1,7 +1,7 @@
 ---
 type: lecture
 date: 2021-04-26T16:00:00-05:00
-title: "Video Editing and Synthesis (part 1)
+title: "Video Editing and Synthesis (part 1)"
 thumbnail: "/static_files/lectures/video_editing1.png"
 tldr: "How can we extend our techniques to the video setting?"
 hide_from_announcments: true
