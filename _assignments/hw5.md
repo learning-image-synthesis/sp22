@@ -8,6 +8,17 @@ due_event:
     type: due
     date: 2021-05-03T23:59:00-5:00
     description: 'Assignment #5 due'
+winner:
+    - name: George Cazenavette
+      link: http://www.andrew.cmu.edu/course/16-726/projects/gcazenav/proj5/
+runnerup:
+    - name: Manuel Guevara
+      link: http://www.andrew.cmu.edu/course/16-726/projects/manuelr/proj5/
+    - name: Zijie Li
+      link: http://www.andrew.cmu.edu/course/16-726/projects/zijieli/proj5/
+    - name: Zhe Huang
+      link: http://www.andrew.cmu.edu/course/16-726/projects/zhehuang/proj5/
+
 mathjax: true
 hide_from_announcments: true
 ---

@@ -16,6 +16,8 @@ hide_from_announcments: true
 {% include image.html url="/static_files/assignments/project/teaser.png" %}
 This image was taken from [State of the Art on Neural Rendering](https://arxiv.org/abs/2004.03805) by Tewari et al.
 
+**News**: [Here](http://www.andrew.cmu.edu/course/16-726/projects/) is the collection of final projects. 
+
 ## Introduction
 
 Welcome to the final project for the class. The purpose is to show us something novel based on the materials we cover in the class. You can try a new modification of a method, a particularly novel application, or a close analysis of the properties of an existing method. We'll read over your project proposals and give feedback on them early on so that we can get awesome results on cool problems! Feel free to come to our office hours to discuss the progress and challenges over the rest of the semester. We're happy to help!
