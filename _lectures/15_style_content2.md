@@ -5,10 +5,10 @@ title: "Style and Content, Texture Synthesis (part 2)"
 tldr: "How to control the style and content of your image with Deep Learning, part 2"
 hide_from_announcments: true
 links:
-    - url: "http://www.andrew.cmu.edu/course/16-726/static_files/2021_03_22and24_texture_synthesis_combined.pptx"
-      name: pptx
-    - url: "http://www.andrew.cmu.edu/course/16-726/static_files/2021_03_22and24_texture_synthesis_combined.pdf"
+    - url: "https://drive.google.com/file/d/1lJf1toahGc_GogZGAFAi7vWTIUjD81a7/view?usp=sharing"
       name: pdf
+    - url: "https://drive.google.com/file/d/1UcWF6zg2eOZiPnSerxriWZrURBozwOV-/view?usp=sharing"
+      name: pptx
 ---
 Reading List:
 - [Separating Style and Content, Tenenbaum & Freeman, Neurips 1996](https://proceedings.neurips.cc/paper/1996/hash/70222949cc0db89ab32c9969754d4758-Abstract.html)

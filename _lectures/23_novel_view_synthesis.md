@@ -6,9 +6,9 @@ thumbnail: "/static_files/lectures/novel_view_synthesis.png"
 tldr: "Techniques for changing your (camera's) point of view"
 hide_from_announcments: true
 links:
-    - url: "http://www.andrew.cmu.edu/course/16-726/static_files/2021_04_21_novel_view_synthesis.pptx"
+    - url: "https://drive.google.com/file/d/1xH4XVI_h9dzTPdN2CcpRKVoDYXvaV5MB/view?usp=sharing"
       name: pptx
-    - url: "http://www.andrew.cmu.edu/course/16-726/static_files/2021_04_21_novel_view_synthesis.pdf"
+    - url: "https://drive.google.com/file/d/15PsJUSbH-9gFpRO8X-zxinfB0r53uxN5/view?usp=sharing"
       name: pdf
 ---
 Reading List:

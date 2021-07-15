@@ -6,9 +6,9 @@ thumbnail: "/static_files/lectures/moons_gif.gif"
 tldr: Generative models are much more than GANs, e.g. variational autoencoder, normalizing flows, etc.) 
 hide_from_announcments: true
 links:
-    - url: "http://www.andrew.cmu.edu/course/16-726/static_files/2021_03_01and03_generative_models_v3.pptx"
+    - url: "https://drive.google.com/file/d/1gi84zVjyswKoTJyXD8Czy4ozy7xrlvsF/view?usp=sharing"
       name: pptx
-    - url: "http://www.andrew.cmu.edu/course/16-726/static_files/2021_03_01and03_generative_models_v3.pdf"
+    - url: "https://drive.google.com/file/d/1j8rXmDAnIqZSred_b9009asayUou5iug/view?usp=sharing"
       name: pdf
 ---
 Reading List:

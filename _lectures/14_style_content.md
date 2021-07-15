@@ -6,9 +6,9 @@ thumbnail: "/static_files/lectures/teaser_style_and_content.png"
 tldr: "How to control the style and content of your image with Deep Learning"
 hide_from_announcments: true
 links:
-    - url: "http://www.andrew.cmu.edu/course/16-726/static_files/2021_03_17_style_and_content.pptx"
+    - url: "https://drive.google.com/file/d/1N3AC4r_TQGbyXVaduCrKsHKrpATpG1Mb/view?usp=sharing"
       name: pptx
-    - url: "http://www.andrew.cmu.edu/course/16-726/static_files/2021_03_17_style_and_content.pdf"
+    - url: "https://drive.google.com/file/d/1X8u2o8tSyW3c70mWk2NMbYykjVE247pg/view?usp=sharing"
       name: pdf
 ---
 Reading List:

@@ -6,9 +6,9 @@ thumbnail: "/static_files/lectures/video_editing1.png"
 tldr: "How can we extend our techniques to the video setting?"
 hide_from_announcments: true
 links:
-    - url: "http://www.andrew.cmu.edu/course/16-726/static_files/2021_04_26_video_editing.pptx"
+    - url: "https://drive.google.com/file/d/1pZdRNp_6unvcUI7TRCDPzKKHEutWq-fF/view?usp=sharing"
       name: pptx
-    - url: "http://www.andrew.cmu.edu/course/16-726/static_files/2021_04_26_video_editing.pdf"
+    - url: "https://drive.google.com/file/d/1h1ennYgh_VvINCblNrn8StOLLW6ELdPg/view?usp=sharing"
       name: pdf
 ---
 Reading List:

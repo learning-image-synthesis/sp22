@@ -5,9 +5,9 @@ title: "Conditional GANs, Image-to-Image Translation (part 1)"
 thumbnail: "/static_files/lectures/0308.png"
 hide_from_announcments: true
 links:
-    - url: "http://www.andrew.cmu.edu/course/16-726/static_files/2021_03_08_cGANs_s_v2.pptx"
+    - url: "https://drive.google.com/file/d/1sntCVgpwzwU3H_gHaIthupxZVlyb7psS/view?usp=sharing"
       name: pptx
-    - url: "http://www.andrew.cmu.edu/course/16-726/static_files/2021_03_08_cGANs_s_v2.pdf"
+    - url: "https://drive.google.com/file/d/13WZeVmTBmKRT8-mfnyZniiAynalQX38m/view?usp=sharing"
       name: pdf
 ---
 Reading List:

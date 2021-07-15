@@ -5,9 +5,9 @@ title: "Texture Synthesis"
 tldr: "Further techniques and results in Texture Synthesis and Style Transfer"
 hide_from_announcments: true
 links:
-    - url: "http://www.andrew.cmu.edu/course/16-726/static_files/2021_03_22and24_texture_synthesis_combined.pptx"
+    - url: "https://drive.google.com/file/d/1UcWF6zg2eOZiPnSerxriWZrURBozwOV-/view?usp=sharing"
       name: pptx
-    - url: "http://www.andrew.cmu.edu/course/16-726/static_files/2021_03_22and24_texture_synthesis_combined.pdf"
+    - url: "https://drive.google.com/file/d/1lJf1toahGc_GogZGAFAi7vWTIUjD81a7/view?usp=sharing"
       name: pdf
 ---
 Required Reading List:

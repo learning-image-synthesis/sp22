@@ -6,9 +6,9 @@ thumbnail: "/static_files/lectures/2021_03_29_teaser.png"
 tldr: "Use an optimization algorithm in a learned space to achieve photo manipulation"
 hide_from_announcments: true
 links:
-    - url: "http://www.andrew.cmu.edu/course/16-726/static_files/2021_03_29_image_editing_optimization.pptx"
+    - url: "https://drive.google.com/file/d/1wcZW7CR3pEq-y-xUVfjOOoIlej5_qnir/view?usp=sharing"
       name: pptx
-    - url: "http://www.andrew.cmu.edu/course/16-726/static_files/2021_03_29_image_editing_optimization.pdf"
+    - url: "https://drive.google.com/file/d/1aPkPd269r6FHU-qpECznoqUbEi3_zog7/view?usp=sharing"
       name: pdf
 ---
 Required Reading List:

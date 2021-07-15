@@ -6,9 +6,9 @@ thumbnail: "/static_files/lectures/face_modeling2.png"
 tldr: "What special techniques can we use to generate and manipulate realistic faces?"
 hide_from_announcments: true
 links:
-    - url: "http://www.andrew.cmu.edu/course/16-726/static_files/2021_04_19_face_modeling2.pptx"
+    - url: "https://drive.google.com/file/d/1sL14rgPJZ2GGDJwpGKZ0bHr_ufKT7jV4/view?usp=sharing"
       name: pptx
-    - url: "http://www.andrew.cmu.edu/course/16-726/static_files/2021_04_19_face_modeling2.pdf"
+    - url: "https://drive.google.com/file/d/1W1ZSJFHFN7OTuIvix0QRP1h-ZkxLfIGx/view?usp=sharing"
       name: pdf
 ---
 Reading List:
