@@ -4,11 +4,11 @@ course_description: "This course introduces machine learning methods for image a
 prereq_know: "This course requires familiarity with basic concepts of computer vision/graphics/image processing
               (16385 or 15462 or 15463 or 16720 or 18793). Some knowledge of machine learning (10301 or
               10315 or 10601 or 10606 or 10607 or 10701) will also be helpful."
-course_semester: "Spring 2021"
-course_time: "Time: Mondays, Wednesdays 4:00 pm - 5:20 pm ET"
-course_location: "Location: remote-only (see Canvas for Zoom links)"
+course_semester: "Spring 2022"
+course_time: "Time: Mondays, Wednesdays 3:05 pm - 4:25 pm ET"
+course_location: "Location: remote-only for first 2 weeks/TBD later (see Canvas for Zoom links)"
 
-baseurl: "" # the subpath of your site, e.g. /blog/
+baseurl: "sp22" # the subpath of your site, e.g. /blog/
 url: "http://learning-image-synthesis.github.io/" # the base hostname & protocol for your site
 
 schoolname: "Carnegie Mellon University"
