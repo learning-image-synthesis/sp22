@@ -9,7 +9,7 @@ course_time: "Time: Mondays, Wednesdays 3:05 pm - 4:25 pm ET"
 course_location: "Location: remote-only for first 2 weeks / TBD later (see Canvas for Zoom links)"
 
 baseurl: "/sp22" # the subpath of your site, e.g. /blog/
-url: "http://16726-image-synthesis.github.io/" # the base hostname & protocol for your site
+url: "http://learning-image-synthesis.github.io/" # the base hostname & protocol for your site
 
 schoolname: "Carnegie Mellon University"
 schoolurl: "https://cmu.edu"
