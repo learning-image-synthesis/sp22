@@ -5,7 +5,7 @@ title: "Introduction"
 thumbnail: /static_files/lectures/spade.gif
 tldr: "Introduction to the course, how images are created and manipulated by humans and machines"
 links:
-    - url: "https://canvas.cmu.edu/files/7565810/download?download_frd=1"
+    - url: "/static_files/lectures/lecture1_introduction.pdf"
       name: pdf
     - url: "https://canvas.cmu.edu/files/7565933/download?download_frd=1"
       name: pptx
