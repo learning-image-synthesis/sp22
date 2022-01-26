@@ -1,11 +1,11 @@
 ---
 type: assignment
-date: 2021-02-01T4:00:00-5:00
+date: 2022-01-26T4:00:00-5:00
 title: 'Assignment #0 - How to submit assignments?'
 thumbnail: /static_files/assignments/hw0/thumbnail.png
 due_event:
     type: due
-    date: 2021-02-01T23:59:00-5:00
+    date: 2022-02-01T23:59:00-5:00
     description: 'Assignment #0 due'
 hide_from_announcments: true
 ---

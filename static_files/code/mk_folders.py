@@ -24,8 +24,6 @@ def main(args):
     with open(roster_file, newline='') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
-            if not 'andrew.cmu.edu' in row['email']:
-                continue
             print(row['name'], row['email'], row['role'])
             andrew_id = row['email'][:row['email'].index('@')]
             print(andrew_id)
@@ -43,8 +41,21 @@ def main(args):
                check=True
             )
             html_str = f"<!doctype html><html lang=en><head><meta charset=utf-8><title>{andrew_id}</title></head>\n" + \
-                       f"<body><p>{row['name']}'s home page for 16-726" 
+                       f"<body><p>{row['name']}'s home page for 16-726</p></body></html>" 
             with open(str(student_folder / "index.html"), "w+") as f:
+                f.write(html_str)
+
+            student_folder_0 = www_root / andrew_id / "proj0"
+            subprocess.run(
+               ['mkdir', '-p', str(student_folder_0)],
+               text=True,
+               stdout=subprocess.PIPE,
+               check=True
+            )
+
+            html_str = f"<!doctype html><html lang=en><head><meta charset=utf-8><title>{andrew_id}'s project 0</title></head>\n" + \
+                       f"<body><p>{row['name']}'s home page for 16-726 project 0</p></body></html>" 
+            with open(str(student_folder_0 / "index.html"), "w+") as f:
                 f.write(html_str)
         
 
