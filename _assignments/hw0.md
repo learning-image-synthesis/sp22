@@ -52,3 +52,9 @@ __FAQs__
 - Your project directory is linked to your _Andrew_ id; if you use a CS computer (*.cs.cmu.edu), and run into trouble, try the instructions above, using an Andrew computer to hand in your work.
 - If you have problems with images not appearing on your page, check that 1) filenames match your html files (e.g. .JPG vs .jpeg). 2) relative path is used from the correct root directory. 
 - Please contact TA if there are problems. 
+
+
+## What to submit for hw0?
+Make sure you have tested the above steps and please:
+- Change the `index.html` file created for you at `/afs/andrew.cmu.edu/course/16/726-sp22/www/projects/andrew_id/proj0/index.html`. Be creative!
+- If you are not familar with html/css, this is a good time to start learning some of the basics. [w3schools](https://www.w3schools.com/html/default.asp) has some basic tutorials.
