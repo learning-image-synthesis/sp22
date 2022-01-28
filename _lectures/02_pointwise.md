@@ -14,5 +14,5 @@ hide_from_announcments: true
 ---
 Reading List:
 - [Szeliski Book, Chapters 3.1, 3.2, and 3.5](https://szeliski.org/Book/)
-- [Color Transfer between Images](http://kel/imagepapers/ColorTransfer.pdf)
+- [Color Transfer between Images](https://www.cs.tau.ac.il/~turkel/imagepapers/ColorTransfer.pdf)
 - [Non-rigid dense correspondence with applications for image enhancement](https://dl.acm.org/doi/10.1145/1964921.1964965)
