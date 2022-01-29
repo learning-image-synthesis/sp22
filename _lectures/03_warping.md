@@ -4,11 +4,12 @@ date: 2022-01-26T16:00:00-05:00
 title: "Global and Local Image Warping"
 tldr: "Applying global and local geometric transformations to an image"
 thumbnail: "/static_files/lectures/0208.png"
-# links:
-    # - url: "/static_files/lectures/2020_02_08_warping.pdf"
-    #   name: pdf
-    # - url: "/static_files/lectures/2020_02_08_warping.pptx"
-    #   name: pptx
+links:
+    - url: "/static_files/lectures/lecture3_global_and_local warping.pdf"
+      name: pdf
+    - url: "https://canvas.cmu.edu/files/7606695/download?download_frd=1"
+      name: pptx
+
 hide_from_announcments: true
 ---
 
