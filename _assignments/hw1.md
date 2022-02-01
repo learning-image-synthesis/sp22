@@ -92,7 +92,7 @@ For all extra credit, be sure to demonstrate on your web page cases where your e
 
 This assignment will be graded out of 100 points, as follows:
 
-- 60 points (40 for those in the grad version of the class) for a single-scale implementation with successful results on low-res images.
+- 60 points for a single-scale implementation with successful results on low-res images.
 - 40 points for a multiscale pyramid version that works on the large images.
 - Up to 5 points for bells & whistles explicitly mentioned above.
 - Up to 5 points for bells & whistles you come up with on your own (and OK with course staff).
