@@ -4,11 +4,11 @@ date: 2022-01-31T16:00:00-05:00
 title: "Data-Driven Graphics"
 tldr: "Copy-paste smartly from large-scale data to compose an image"
 thumbnail: "/static_files/lectures/0210.png"
-# links:
-#     - url: "https://drive.google.com/file/d/1XCgZzJGG2HntQ3UxBWkZOO-IinI3y72D/view?usp=sharing"
-#       name: pdf
-#     - url: "https://drive.google.com/file/d/1wluSu4pg0m0aUNiRnh5lH1yIrjQM28_c/view?usp=sharing"
-#       name: pptx
+links:
+    - url: "/static_files/lectures/lecture4.pdf"
+      name: pdf
+    - url: "https://canvas.cmu.edu/files/7629937/download?download_frd=1"
+      name: pptx
 hide_from_announcments: true
 ---
 

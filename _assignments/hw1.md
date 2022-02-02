@@ -50,6 +50,10 @@ Your job will be to implement an algorithm that, given a 3-channel image, produc
 Additional details for the implementations.
 ```
 # functions allowed
+cv2.resize
+PIL.Image.resize
+skimage.transform.resize
+scipy.misc.imresize
 np.roll
 scipy.ndimage.interpolation.shift
 
