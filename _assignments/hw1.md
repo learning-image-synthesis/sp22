@@ -47,6 +47,19 @@ Exhaustive search will become prohibitively expensive if the pixel displacement 
 
 Your job will be to implement an algorithm that, given a 3-channel image, produces a color image as output. Implement a simple single-scale version first, using for loops, searching over a user-specified window of displacements. You should pick one of the smaller .jpg images in the directory to test this version of the code. Next, add a coarse-to-fine pyramid speedup to handle large images like the .tiff ones provided in the directory.
 
+Additional details for the implementations.
+```
+# functions allowed
+np.roll
+scipy.ndimage.interpolation.shift
+
+# functions not allowed (unlikely you'll need it anyways)
+np.fft
+scipy.ndimage.convolve
+scipy.signal.convolve2d
+```
+You're allowed to use *any* functions for **Bells & Whistiles**.
+
 ## Submission
 Please submit both your code (to Canvas) and a project webpage (to AFS). A general guideline could be found in [Assignment #0](/sp22/assignments/hw0).
 
