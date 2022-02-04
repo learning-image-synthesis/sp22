@@ -19,5 +19,6 @@ Reading list:
 - [Gradient-based learning applied to document recognition](http://www.iro.umontreal.ca/~lisa/bib/pub_subject/finance/pointeurs/lecun-98.pdf), Lecun et al., Proc of IEEE, 1998.
 - [Receptive Fields of Single Neurones in the Cat's Striate Cortex](https://inst.eecs.berkeley.edu//~cs194-26/fa18/Papers/HuberAndWiesel59.pdf), Huber and Wiesel, J. Physiol, 1959.
 - [Learning to Generate Chairs, Tables and Cars with Convolutional Networks](https://arxiv.org/abs/1411.5928), Dosovitskiy et al., PAMI 2017 (CVPR 2015)
+- [Deconvolution and Checkerboard Artifacts](https://distill.pub/2016/deconv-checkerboard/)
 - [Colorful Image Colorization](http://richzhang.github.io/colorization/), Zhang et al., ECCV 2016.
 - [Deep Learning](https://s3.us-east-2.amazonaws.com/hkg-website-assets/static/pages/files/DeepLearning.pdf), LeCun, Bengio, and Hinton, Nature 2015. 
