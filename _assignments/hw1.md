@@ -50,6 +50,8 @@ Your job will be to implement an algorithm that, given a 3-channel image, produc
 Additional details for the implementations.
 ```
 # functions allowed
+np.mean
+np.linalg.norm
 cv2.resize
 PIL.Image.resize
 skimage.transform.resize
