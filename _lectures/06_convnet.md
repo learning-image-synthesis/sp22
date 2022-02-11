@@ -4,11 +4,11 @@ date: 2022-02-07T16:00:00-05:00
 title: "Convolutional Network for Image Synthesis"
 tldr: Convolutional networks aids in achieving higher quality images by leveraging higher-level knowledge of objects.
 thumbnail: "/static_files/lectures/0217.png"
-# links:
-#     - url: "/static_files/lectures/2020_02_17_lecture4_CNN_image_synthesis_v2.pdf"
-#       name: pdf
-#     - url: "/static_files/lectures/2020_02_17_lecture4_CNN_image_synthesis_v2.pptx"
-#       name: pptx
+links:
+    - url: "/static_files/lectures/lecture5_CNN_image_synthesis.pdf"
+      name: pdf
+    - url: "https://canvas.cmu.edu/files/7670492/download?download_frd=1"
+      name: pptx
 hide_from_announcments: true
 ---
 
