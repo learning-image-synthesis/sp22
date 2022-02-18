@@ -2,7 +2,7 @@
 type: lecture
 date: 2022-02-16T16:00:00-05:00
 title: "Generative Models Zoo"
-thumbnail: "/static_files/lectures/lecture8_teaser.gif"
+thumbnail: "/static_files/lectures/lecture8_teaser.jpg"
 tldr: Generative models are much more than GANs, e.g. variational autoencoder, normalizing flows, etc.) 
 hide_from_announcments: true
 links:
