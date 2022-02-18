@@ -1,15 +1,15 @@
 ---
 type: lecture
 date: 2022-02-16T16:00:00-05:00
-title: "Other Generative Models"
-thumbnail: "/static_files/lectures/moons_gif.gif"
+title: "Generative Models Zoo"
+thumbnail: "/static_files/lectures/lecture8_teaser.gif"
 tldr: Generative models are much more than GANs, e.g. variational autoencoder, normalizing flows, etc.) 
 hide_from_announcments: true
-# links:
-#     - url: "https://drive.google.com/file/d/1gi84zVjyswKoTJyXD8Czy4ozy7xrlvsF/view?usp=sharing"
-#       name: pptx
-#     - url: "https://drive.google.com/file/d/1j8rXmDAnIqZSred_b9009asayUou5iug/view?usp=sharing"
-#       name: pdf
+links:
+    - url: "https://canvas.cmu.edu/files/7724989/download?download_frd=1"
+      name: pptx
+    - url: "/static_files/lectures/lecture8_generative_models.pdf"
+      name: pdf
 ---
 Reading List:
 - Deep Learning Book, Chapter 20
