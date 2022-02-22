@@ -146,7 +146,7 @@ Can you do better than rgb2gray? Gradient-domain processing provides one avenue:
 **Hint:** Try converting the image to HSV space and looking at the gradients in each channel. Then, approach it as a mixed gradients problem where you also want to preserve the grayscale intensity.
 
 ### More gradient domain processing (up to 3 pts)
-Many other applications are possible, including non-photorealistic rendering, edge enhancement, and texture or color transfer. See [Perez et al. 2003](http://www.cs.brown.edu/courses/csci1950-g/asgn/proj2/resources/PoissonImageEditing.pdf) and [GradientShop](http://grail.cs.washington.edu/project/gradientshop) for further ideas.
+Many other applications are possible, including non-photorealistic rendering, edge enhancement, and texture or color transfer. See [Perez et al. 2003](http://www.cs.brown.edu/courses/csci1950-g/asgn/proj2/resources/PoissonImageEditing.pdf) and [GradientShop](http://grail.cs.washington.edu/projects/gradientshop) for further ideas.
 
 
 ## Grading
