@@ -4,11 +4,11 @@ date: 2022-02-23T16:00:00-05:00
 title: "Conditional GANs, Image-to-Image Translation (part 1)"
 thumbnail: "/static_files/lectures/0308.png"
 hide_from_announcments: true
-# links:
-#     - url: "https://drive.google.com/file/d/1sntCVgpwzwU3H_gHaIthupxZVlyb7psS/view?usp=sharing"
-#       name: pptx
-#     - url: "https://drive.google.com/file/d/13WZeVmTBmKRT8-mfnyZniiAynalQX38m/view?usp=sharing"
-#       name: pdf
+links:
+    - url: "https://canvas.cmu.edu/files/7769892/download?download_frd=1"
+      name: pptx
+    - url: "/static_files/lectures/lecture9_cGANs_part1.pdf"
+      name: pdf
 ---
 Reading List:
 - [Image-to-Image Translation with Conditional Adversarial Networks, Isola et al, CVPR 2017](https://arxiv.org/abs/1611.07004)
