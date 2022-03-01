@@ -4,11 +4,11 @@ date: 2022-02-28T16:00:00-05:00
 title: "Conditional GANs, Image-to-Image Translation (Part 2)"
 thumbnail: "/static_files/lectures/horse2zebra.jpg"
 hide_from_announcments: true
-# links:
-#     - url: "https://drive.google.com/file/d/1saCk5Qn2EXWfwsvg7UBtApyZEBuKQMhL/view?usp=sharing"
-#       name: pptx
-#     - url: "https://drive.google.com/file/d/1sntCVgpwzwU3H_gHaIthupxZVlyb7psS/view?usp=sharing"
-#       name: pdf
+links:
+    - url: "https://canvas.cmu.edu/files/7785320/download?download_frd=1"
+      name: pptx
+    - url: "/static_files/lectures/lecture10_cGANs_part2.pdf"
+      name: pdf
 ---
 Reading List:
 
