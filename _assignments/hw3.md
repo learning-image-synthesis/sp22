@@ -62,23 +62,23 @@ The discriminator in this DCGAN is a convolutional neural network with the follo
           # self.conv2 = conv(...)
           # self.conv3 = conv(...)
           # self.conv4 = conv(...)
+          # self.conv5 = conv(...)
     
-    def forward(self, z):
-        """Generates an image given a sample of random noise.
+    def forward(self, x):
+        """Outputs the discriminator score given an image.
     
             Input
             -----
-                z: BS x noise_size x 1 x 1   -->  16x100x1x1
+                x: BS x 3 x 64 x 64
     
             Output
             ------
-                out: BS x channels x image_width x image_height
+                out: BS x 1 x 1 x 1
         """
         ###########################################
         ##   FILL THIS IN: FORWARD PASS   ##
         ###########################################
-        out = F.tanh(self.deconv5(out))
-        return out   
+        pass
     ```
    
 Note: The function `conv` in `models.py` has an optional argument `norm`: if `norm`
