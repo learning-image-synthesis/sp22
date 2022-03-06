@@ -6,7 +6,7 @@ thumbnail: /static_files/assignments/hw3/teaser.png
 attachment: /static_files/assignments/hw3/16726_s22_hw3.zip
 due_event:
     type: due
-    date: 2022-03-16T23:59:00-5:00
+    date: 2022-03-21T23:59:00-5:00
     description: 'Assignment #3 due'
 mathjax: true
 # runnerup:
