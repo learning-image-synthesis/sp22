@@ -4,11 +4,11 @@ date: 2022-03-14T16:00:00-05:00
 title: "Style and Content, Texture Synthesis (part 2)"
 tldr: "How to control the style and content of your image with Deep Learning, part 2"
 hide_from_announcments: true
-links:
-    - url: "https://drive.google.com/file/d/1lJf1toahGc_GogZGAFAi7vWTIUjD81a7/view?usp=sharing"
-      name: pdf
-    - url: "https://drive.google.com/file/d/1UcWF6zg2eOZiPnSerxriWZrURBozwOV-/view?usp=sharing"
-      name: pptx
+# links:
+#     - url: "https://drive.google.com/file/d/1lJf1toahGc_GogZGAFAi7vWTIUjD81a7/view?usp=sharing"
+#       name: pdf
+#     - url: "https://drive.google.com/file/d/1UcWF6zg2eOZiPnSerxriWZrURBozwOV-/view?usp=sharing"
+#       name: pptx
 ---
 Reading List:
 - [PatchMatch: A Randomized Correspondence Algorithm for Structural Image Editing, Barnes et al, SIGGRAPH 2009](https://gfx.cs.princeton.edu/pubs/Barnes_2009_PAR/)
