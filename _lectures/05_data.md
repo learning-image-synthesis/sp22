@@ -17,6 +17,8 @@ Reading list:
 - [GrabCut -Interactive Foreground Extraction using Iterated Graph Cuts, Rother et al. in SIGGRAPH, 2004](https://www.microsoft.com/en-us/research/publication/grabcut-interactive-foreground-extraction-using-iterated-graph-cuts/)
 - [Hybrid Images, Oliva et al. in SIGGRAPH, 2006](https://dl.acm.org/doi/10.1145/1179352.1141919)
 - [Image Deformation Using Moving Least Squares, Schaefer et al. in SIGGRAPH, 2006](https://people.engr.tamu.edu/schaefer/research/mls.pdf)
+- [Sketch2Photo: internet image montage, Chen et al. in SIGGRAPH Asia 2009](https://dl.acm.org/doi/10.1145/1618452.1618470)
+- [Photo Clip Art, Lalonde et al. in SIGGARPH 2007](http://graphics.cs.cmu.edu/projects/photoclipart/)
 - [Graphcut Textures: Image and Video Synthesis Using Graph Cuts, 2003](https://faculty.cc.gatech.edu/~turk/my_papers/graph_cuts.pdf)
 - [ShadowDraw: Real-Time User Guidance for Freehand Drawing, 2011](https://vision.cs.utexas.edu/projects/shadowdraw/shadowdraw.html)
 - [Summarizing Visual Data Using Bidirectional Similarity, 2008](https://www.wisdom.weizmann.ac.il/~vision/VisualSummary/bidirectional_similarity_CVPR2008.pdf)
