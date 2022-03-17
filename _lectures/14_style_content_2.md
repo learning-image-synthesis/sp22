@@ -17,5 +17,3 @@ Reading List:
 - [Non-Stationary Texture Synthesis by Adversarial Expansion, Zhou et al, SIGGRAPH 2018](https://arxiv.org/abs/1805.04487)
 - [Deep Image Harmonization, Luan et al., EGSR 2018](https://arxiv.org/abs/1703.00069)
 - [Cross-domain Correspondence Learning for Exemplar-based Image Translation, Zhang et al., CVPR 2020. ](https://arxiv.org/abs/2004.05571)
-<!-- - [Separating Style and Content, Tenenbaum & Freeman, Neurips 1996](https://proceedings.neurips.cc/paper/1996/hash/70222949cc0db89ab32c9969754d4758-Abstract.html)
-- [Image Analogies, Hertzmann et al, SIGGRAPH 2001](https://mrl.cs.nyu.edu/publications/image-analogies/analogies-72dpi.pdf) -->
