@@ -10,7 +10,7 @@ hide_from_announcments: true
 #     - url: "https://drive.google.com/file/d/1lJf1toahGc_GogZGAFAi7vWTIUjD81a7/view?usp=sharing"
 #       name: pdf
 ---
-Required Reading List:
+Reading List:
  - [Semi-parametric Image Synthesis, Qi et al, CVPR 2018](https://arxiv.org/abs/1804.10992)
  - [StarGAN v2: Diverse Image Synthesis for Multiple Domains, Choi et al, CVPR 2020](https://arxiv.org/abs/1912.01865)
  - [FUNIT: Few-Shot Unsupervised Image-to-Image Translation, Liu et al, ICCV 2019](https://arxiv.org/abs/1905.01723)
