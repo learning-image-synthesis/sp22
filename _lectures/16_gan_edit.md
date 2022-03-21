@@ -20,3 +20,4 @@ Reading List:
 - [GAN Dissection: Visualizing and Understanding Generative Adversarial Networks, Bau et al, ICLR 2019](https://arxiv.org/abs/1811.10597)
 - [GANSpace: Discovering Interpretable GAN Controls, Härkönen et al, NeurIPS 2020](https://arxiv.org/abs/2004.02546)
 - [On the “steerability” of generative adversarial networks, Jahanian et al, ICLR 2020](https://arxiv.org/abs/1907.07171)
+- [GAN Inversion: A Survey. Xia et al. 2021](https://arxiv.org/abs/2101.05278)
