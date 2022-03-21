@@ -29,8 +29,6 @@ In this assignment, you will implement neural style transfer which resembles spe
 
 In the first part of the assignment, you will start from random noise and optimize it in content space. It helps you get familiar with the general idea of optimizing pixels with respect to certain losses.  In the second part of the assignment, you will ignore content for a while and only optimize to generate textures. This builds some intuitive connection between style-space distance and gram matrix.  Lastly, we combine all of these pieces to perform neural style transfer.
 
-We have provided the starter code and test images [here](/static_files/assignments/hw4/hw4_starter.tar.gz).
-
 ## Part 1: Content Reconstruction [30 points]
 For the first part of the assignment, you will implement content-space loss and optimize a random noise with respect to the content loss only.
 
