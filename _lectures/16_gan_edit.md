@@ -17,7 +17,4 @@ Reading List:
 - [Semantic Photo Manipulation with a Generative Image Prior, Bau et al, SIGGRAPH 2019](https://arxiv.org/abs/2005.07727)
 - [Image2StyleGAN: How to Embed Images Into the StyleGAN Latent Space?, Abdal et al, ICCV 2019](https://openaccess.thecvf.com/content_ICCV_2019/papers/Abdal_Image2StyleGAN_How_to_Embed_Images_Into_the_StyleGAN_Latent_Space_ICCV_2019_paper.pdf)
 - [StyleGAN2: Analyzing and Improving the Image Quality of StyleGAN., Karras et al, CVPR 2020](https://arxiv.org/abs/1912.04958)
-- [GAN Dissection: Visualizing and Understanding Generative Adversarial Networks, Bau et al, ICLR 2019](https://arxiv.org/abs/1811.10597)
-- [GANSpace: Discovering Interpretable GAN Controls, Härkönen et al, NeurIPS 2020](https://arxiv.org/abs/2004.02546)
-- [On the “steerability” of generative adversarial networks, Jahanian et al, ICLR 2020](https://arxiv.org/abs/1907.07171)
 - [GAN Inversion: A Survey. Xia et al. 2021](https://arxiv.org/abs/2101.05278)
