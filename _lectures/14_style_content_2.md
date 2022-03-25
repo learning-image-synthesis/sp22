@@ -2,6 +2,7 @@
 type: lecture
 date: 2022-03-14T16:00:00-05:00
 title: "Style and Content, Texture Synthesis (part 2)"
+thumbnail: "/static_files/lectures/lecture12.png"
 tldr: "How to control the style and content of your image with Deep Learning, part 2"
 hide_from_announcments: true
 links:
