@@ -2,14 +2,14 @@
 type: lecture
 date: 2022-03-21T16:00:00-05:00
 title: "Image Editing and Optimization"
-thumbnail: "/static_files/lectures/2021_03_29_teaser.png"
+thumbnail: "/static_files/lectures/lecture13.png"
 tldr: "Use an optimization algorithm in a learned space to achieve photo manipulation"
 hide_from_announcments: true
-# links:
-#     - url: "https://drive.google.com/file/d/1wcZW7CR3pEq-y-xUVfjOOoIlej5_qnir/view?usp=sharing"
-#       name: pptx
-#     - url: "https://drive.google.com/file/d/1aPkPd269r6FHU-qpECznoqUbEi3_zog7/view?usp=sharing"
-#       name: pdf
+links:
+    - url: "https://canvas.cmu.edu/files/7885142/download?download_frd=1"
+      name: pptx
+    - url: "/static_files/lectures/lecture13_image_editing_optimization_part1.pdf"
+      name: pdf
 ---
 Reading List:
 - [Generative Visual Manipulation on the Natural Image Manifold, Zhu et al, ECCV 2016](https://arxiv.org/abs/1609.03552)
