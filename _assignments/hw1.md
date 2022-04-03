@@ -9,24 +9,20 @@ due_event:
     date: 2022-02-16T23:59:00-5:00
     description: 'Assignment #1 due'
 
-# runnerup:
-#     - name: Juyong Kim
-#       link: http://www.andrew.cmu.edu/course/16-726/projects/juyongk/proj1/
-#     - name: Zihang Lai
-#       link: http://www.andrew.cmu.edu/course/16-726/projects/zihangl/proj1/
-#     - name: Manuel Rodriguez 
-#       link: http://www.andrew.cmu.edu/course/16-726/projects/manuelr/proj1/
-# winner: 
-#     - name: Konwoo Kim
-#       link: http://www.andrew.cmu.edu/course/16-726/projects/konwook/proj1/
+runnerup:
+    - name: Harry Freeman
+      link: https://www.andrew.cmu.edu/course/16-726-sp22/projects/hfreeman/proj1/
+winner: 
+    - name: Riyaz Panjwani
+      link: https://www.andrew.cmu.edu/course/16-726-sp22/projects/rpanjwan/proj1/
 hide_from_announcments: true
 ---
 
 {% include image.html url="/static_files/assignments/hw1/teaser.jpg" width=800 align="center" %}
-<!-- ## Award Winners!
-We've completed the homework, grading, and voting, and the winner of our best assignment is [Konwoo Kim](http://www.andrew.cmu.edu/course/16-726/projects/konwook/proj1/)!
+## Award Winners!
+We've completed the homework, grading, and voting, and the winner of our best assignment is [Riyaz Panjwani](https://www.andrew.cmu.edu/course/16-726-sp22/projects/rpanjwan/proj1/)!
 
-Honorable Mentions go to [Juyong Kim](http://www.andrew.cmu.edu/course/16-726/projects/juyongk/proj1/), [Zihang Lai](http://www.andrew.cmu.edu/course/16-726/projects/zihangl/proj1/), and [Manuel Rodriguez](http://www.andrew.cmu.edu/course/16-726/projects/manuelr/proj1/). Great work to all and check out the winning projects! -->
+Honorable Mentions go to [Harry Freeman](https://www.andrew.cmu.edu/course/16-726-sp22/projects/hfreeman/proj1/). Great work to all and check out the winning projects!
 
 ## Background
 [Sergei Mikhailovich Prokudin-Gorskii](http://en.wikipedia.org/wiki/Prokudin-Gorskii) (1863-1944) [Сергей Михайлович Прокудин-Горский, to his Russian friends] was a man well ahead of his time. Convinced, as early as 1907, that color photography was the wave of the future, he won Tzar's special permission to travel across the vast Russian Empire and take color photographs of everything he saw including the only color portrait of [Leo Tolstoy](http://en.wikipedia.org/wiki/Leo_Tolstoy). And he really photographed everything: people, buildings, landscapes, railroads, bridges... thousands of color pictures! His idea was simple: record three exposures of every scene onto a glass plate using a red, a green, and a blue filter. Never mind that there was no way to print color photographs until much later -- he envisioned special projectors to be installed in "multimedia" classrooms all across Russia where the children would be able to learn about their vast country. Alas, his plans never materialized: he left Russia in 1918, right after the revolution, never to return again. Luckily, his RGB glass plate negatives, capturing the last years of the Russian Empire, survived and were purchased in 1948 by the Library of Congress. The LoC has recently digitized the negatives and made them available on-line.

@@ -9,21 +9,23 @@ due_event:
     date: 2022-03-02T23:59:00-5:00
     description: 'Assignment #2 due'
 mathjax: true
-# runnerup:
-#     - name: George Cazanavette
-#       link: http://www.andrew.cmu.edu/course/16-726/projects/gcazenav/proj2/
-# winner:
-#     - name: Manuel Rodriguez
-#       link: http://www.andrew.cmu.edu/course/16-726/projects/manuelr/proj2/
-  
+runnerup:
+    - name: Tomas Cabezon Pedroso
+      link: https://www.andrew.cmu.edu/course/16-726-sp22/projects/tcabezon/proj2/
+    - name: Harry Freeman
+      link: https://www.andrew.cmu.edu/course/16-726-sp22/projects/hfreeman/proj2/
+winner: 
+    - name: Riyaz Panjwani
+      link: https://www.andrew.cmu.edu/course/16-726-sp22/projects/rpanjwan/proj2/
 hide_from_announcments: true
 ---
 
-{% include image.html url="/static_files/assignments/hw2/penguins_with_shadow2.jpg" width=800 align="center" %}
-<!-- ## Award Winners!
-We've completed the homework, grading, and voting, and the winner of our best assignment is [Manuel Rodriguez](http://www.andrew.cmu.edu/course/16-726/projects/manuelr/proj2/)
+{% include image.html url="/static_files/assignments/hw1/teaser.jpg" width=800 align="center" %}
+## Award Winners!
+We've completed the homework, grading, and voting, and the winner of our best assignment is [Riyaz Panjwani](https://www.andrew.cmu.edu/course/16-726-sp22/projects/rpanjwan/proj2/)!
 
-Honorable Mention goes to [George Cazanavette](http://www.andrew.cmu.edu/course/16-726/projects/gcazenav/proj2/). Great work to all and check out the winning projects! -->
+Honorable Mentions go to [Tomas Cabezon Pedroso](https://www.andrew.cmu.edu/course/16-726-sp22/projects/tcabezon/proj2/) and [Harry Freeman](https://www.andrew.cmu.edu/course/16-726-sp22/projects/hfreeman/proj2/). Great work to all and check out the winning projects!
+
 ## Background
 This project explores gradient-domain processing, a simple technique with a broad set of applications including blending, tone-mapping, and non-photorealistic rendering. For the core project, we will focus on "Poisson blending"; tone-mapping and NPR can be investigated as bells and whistles.
 
