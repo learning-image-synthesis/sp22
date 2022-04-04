@@ -53,7 +53,7 @@ class ContentLoss(nn.Module):
     return input
 ```
 
-__Feature extractor and Loss Insertion:__ Of course when $L$ equals 0, content-loss is just an L2 pixel loss, which does not resemble content. The content loss is actually in the feature space. To extract the feature, a [VGG-19]() net pre-trained on ImageNet is used. The pre-trained VGG-19 net consists of 5 blocks (conv1-conv5) (with a total of 15 conv layers) and each block serves as a feature extractor at the different abstract levels. 
+__Feature extractor and Loss Insertion:__ Of course when $L$ equals 0, content-loss is just an L2 pixel loss, which does not resemble content. The content loss is actually in the feature space. To extract the feature, a [VGG-19]() net pre-trained on ImageNet is used. The pre-trained VGG-19 net consists of 5 blocks (conv1-conv5) and each block serves as a feature extractor at the different abstract levels. 
 
 The pre-trained VGG-19 (vgg19) can be directly imported from `torchvision.models` module. You will be using the feature extractor of the model only (model.feature). You should also set the model to eval() mode. Write your code to append content loss to the end of specific layers (will be ablated soon) to optimize.
 ```angular2html
