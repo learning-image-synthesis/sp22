@@ -5,11 +5,11 @@ title: "Face Modeling (part 1)"
 thumbnail: "/static_files/lectures/face_modeling.png"
 tldr: "What special techniques can we use to generate and manipulate realistic faces?"
 hide_from_announcments: true
-# links:
-#     - url: "https://drive.google.com/file/d/1TzK66n7XQO8EnV06MwkZLH23lAYtbIdd/view?usp=sharing"
-#       name: pptx
-#     - url: "https://drive.google.com/file/d/1lAHukBt6WfgLlP_HSt6HXeMZFR7wQT2r/view?usp=sharing"
-#       name: pdf
+links:
+    - url: "https://canvas.cmu.edu/files/7925258/download?download_frd=1"
+      name: pptx
+    - url: "/static_files/lectures/lecture15_face_modeling_part1.pdf"
+      name: pdf
 ---
 Reading List:
 - [Active Appearance Models, Cootes et al, ECCV 1998](https://link.springer.com/content/pdf/10.1007/bfb0054760.pdf)

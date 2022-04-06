@@ -5,11 +5,11 @@ title: "Face Modeling (part 2)"
 thumbnail: "/static_files/lectures/face_modeling2.png"
 tldr: "What special techniques can we use to generate and manipulate realistic faces?"
 hide_from_announcments: true
-# links:
-#     - url: "https://drive.google.com/file/d/1sL14rgPJZ2GGDJwpGKZ0bHr_ufKT7jV4/view?usp=sharing"
-#       name: pptx
-#     - url: "https://drive.google.com/file/d/1W1ZSJFHFN7OTuIvix0QRP1h-ZkxLfIGx/view?usp=sharing"
-#       name: pdf
+links:
+    - url: "https://canvas.cmu.edu/files/7953828/download?download_frd=1"
+      name: pptx
+    - url: "/static_files/lectures/lecture16_face_modeling_part2.pdf"
+      name: pdf
 ---
 Reading List:
 - [Reducing the dimensionality of data with neural networks, Hinton & Salakhutdinov, Science 2006](https://science.sciencemag.org/content/313/5786/504)
