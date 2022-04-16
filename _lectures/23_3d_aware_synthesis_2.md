@@ -5,11 +5,11 @@ title: "3D-aware Synthesis (part II)"
 thumbnail: "/static_files/lectures/EG3D.png"
 tldr: "Synthesizing an image of a certain object category from different camera viewpoints"
 hide_from_announcments: true
-# links:
-#     - url: "https://canvas.cmu.edu/files/7975360/download?download_frd=1"
-#       name: pptx
-#     - url: "/static_files/lectures/lecture17_3D_synthesis_part1.pdf"
-#       name: pdf
+links:
+    - url: "https://canvas.cmu.edu/files/7994374/download?download_frd=1"
+      name: pptx
+    - url: "/static_files/lectures/lecture18_3D_synthesis_part2.pdf"
+      name: pdf
 ---
 Reading List:
 - [Learning a Probabilistic Latent Space of Object Shapes via 3D Generative-Adversarial Modeling, Wu et al, NeurIPS 2017](http://3dgan.csail.mit.edu/papers/3dgan_nips.pdf)
