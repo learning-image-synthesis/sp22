@@ -14,6 +14,8 @@ runnerup:
       link: https://www.andrew.cmu.edu/course/16-726-sp22/projects/yutianle/proj4/
     - name: Riyaz Panjwani
       link: https://www.andrew.cmu.edu/course/16-726-sp22/projects/rpanjwan/proj4/
+    - name: Sean Chen
+      link: https://www.andrew.cmu.edu/course/16-726-sp22/projects/yuhsuan2/proj4/
 winner: 
     - name: Lena Du
       link: https://www.andrew.cmu.edu/course/16-726-sp22/projects/jiad/proj4/
