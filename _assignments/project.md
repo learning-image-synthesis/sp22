@@ -19,7 +19,7 @@ This image was taken from [State of the Art on Neural Rendering](https://arxiv.o
 --
 ## Profolio
 
-[Here](http://www.andrew.cmu.edu/course/16-726/projects/) is the collection of final projects.
+[Here](http://www.andrew.cmu.edu/course/16-726-sp22/projects/) is the collection of final projects.
 
 
 Title | Authors | link
