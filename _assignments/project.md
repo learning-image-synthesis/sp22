@@ -17,6 +17,39 @@ hide_from_announcments: true
 This image was taken from [State of the Art on Neural Rendering](https://arxiv.org/abs/2004.03805) by Tewari et al.
 
 --
+## Profolio
+
+[Here](http://www.andrew.cmu.edu/course/16-726/projects/) is the collection of final projects.
+
+
+Title | Authors | link
+---|---| ---
+DeepMTV | Daniel Bronstein, Kelvin Kang | [link](https://www.andrew.cmu.edu/course/16-726-sp22/projects/kelvinka/proj/)
+InterFaceGAN | Tomas Cabezon Pedroso | [link](https://www.andrew.cmu.edu/course/16-726-sp22/projects/tcabezon/project/)
+Open-domain Compositional Image Editing with Text | Qiyun Chen, Gaoyue Zhou, Zhizhuo Zhou | [link](https://www.andrew.cmu.edu/course/16-726-sp22/projects/gaoyuez/project/)
+Curve-based Image Synthesis |  Sean Chen | [link](https://www.andrew.cmu.edu/course/16-726-sp22/projects/yuhsuan2/project/)
+Try-on GAN | Lena Du, Chenguang Deng, Zhong Zheng | [link](https://www.andrew.cmu.edu/course/16-726-sp22/projects/zhengzho/project/)
+3D Mesh generation | Nikolas Diamant, Himalini Gururaj, Shiva Peri | [link](https://www.andrew.cmu.edu/course/16-726-sp22/projects/shivanap/project/)
+GANs for Coarse Style and Scene Data Augmentation | Harry Freeman, Tiffany Ma | [link](https://www.andrew.cmu.edu/course/16-726-sp22/projects/hfreeman/project/)
+Controllable Composition of Visual Relations via Object Abstractions | Nikolaos Gkanatsios | [link](https://www.andrew.cmu.edu/course/16-726-sp22/projects/ngkanats/project/)
+Semantic Chameleon Effects |  Violet Han | [link](https://www.andrew.cmu.edu/course/16-726-sp22/projects/yinuoh/finalproj/)
+LATENT SPACE EXPLORATION FOR FACIAL EXPRESSION SYNTHESIS | Gore Kao, Vivian Cheng, Shirley Kokane | [link](https://www.andrew.cmu.edu/course/16-726-sp22/projects/vccheng/project/)
+Synthetic data generation methods on action classification for domain transfer | Emily Kim, Riyaz Panjwani | [link](https://www.andrew.cmu.edu/course/16-726-sp22/projects/rpanjwan/project/)
+Sliding attributes for GANs | Daria Mashanova, Nishanth Thumbavanam Arun | [link](https://www.andrew.cmu.edu/course/16-726-sp22/projects/nthumbav/project/)
+SemSynSin: end-to-end visual synthesis conditioned on semantic information | Ingrid Navarro, Suann Chi | [link](https://www.andrew.cmu.edu/course/16-726-sp22/projects/ingridn/project/)
+A Study of Deep Learning-based 3D Point Clouds Reconstruction from 2D frames |  Dule Shu | [link](https://www.andrew.cmu.edu/course/16-726-sp22/projects/dules/project/)
+CGAN performance on Lego parts | Alex Strasser | [link](https://www.andrew.cmu.edu/course/16-726-sp22/projects/astrasse/final/)
+Prompting GANs into Feed-Forward Energy-Based Models | Chen Wu | [link](https://www.andrew.cmu.edu/course/16-726-sp22/projects/chenwu2/project/)
+3D human texture synthesis | Yutian Lei, Hao Wu | [link](https://www.andrew.cmu.edu/course/16-726-sp22/projects/yutianle/project/)
+Image compression with GAN | Yida Wu | [link](https://www.andrew.cmu.edu/course/16-726-sp22/projects/yidawu/project/)
+Unsupervised Learning of Depth and Depth-of-Field Effect from Natural Images with Aperture Rendering GANs | Jason Xu, Emma Liu, Joyce Zhang | [link](https://www.andrew.cmu.edu/course/16-726-sp22/projects/emmaliu/project/)
+Reproducing the Results of EG3D: Efficient Geometry-aware 3D GANs | Jeff Tan | [link](https://www.andrew.cmu.edu/course/16-726-sp22/projects/jefftan/project/)
+NeRF in the wild | Yuchen(Joshua) Cao | [link](https://www.andrew.cmu.edu/course/16-726-sp22/projects/yuchenca/final/)
+Arbitrary style transfer on the OAK-1 | Antioch Sanders | [link](https://www.andrew.cmu.edu/course/16-726-sp22/projects/asanders/project/)
+
+<br/>
+Congratulations to all students for their amazing works! 
+<br/>
 
 ## Introduction
 
@@ -44,4 +77,8 @@ You'll need to give a 5-minute presentation about your project in class. We'll a
 You'll need to submit (1) the code for your project to canvas and (2) a website in the `project` directory of your website for the course as you did for other projects. This time, we'd really want to see through the description of the method, outputs of comparison methods (if applicable), the outputs of your algorithm, any math you do, and ablations if applicable. This will be the primary deliverable, and we encourage you all to do a good job with it, as you'll be able to show people what you've made in a nicely presented way.
 
 Good luck!
+
+
+
+
 
